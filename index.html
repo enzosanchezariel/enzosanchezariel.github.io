@@ -19,6 +19,27 @@
         navigation: auto; /**/
       }
     </style>
+    <script>
+      const selectableSelector = ".select-text";
+
+      function clearSelectionIfClickOutside(e) {
+        if (!e.target.closest(selectableSelector)) {
+          const sel = window.getSelection?.();
+          if (sel && !sel.isCollapsed) sel.removeAllRanges();
+        }
+      }
+
+      document.addEventListener("pointerdown", clearSelectionIfClickOutside, {
+        passive: true,
+      });
+
+      document.addEventListener("mousedown", clearSelectionIfClickOutside, {
+        passive: true,
+      });
+      document.addEventListener("touchstart", clearSelectionIfClickOutside, {
+        passive: true,
+      });
+    </script>
   </head>
   <body class="no-callout overflow-x-hidden bg-[#fbfbfb] select-none">
     <nav
@@ -217,7 +238,7 @@
             </p>
           </div>
           <h2 class="pt-6">Proyectos</h2>
-          <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <button
               class="flex overflow-clip rounded-sm border-1 border-slate-200 transition hover:border-emerald-50 hover:bg-emerald-50 active:scale-90 active:border-emerald-50 active:bg-emerald-50"
             >
@@ -258,9 +279,7 @@
                   alt=""
                 />
                 <div class="p-4">
-                  <h1 class="text-left text-xl">
-                    WebQuizApp
-                  </h1>
+                  <h1 class="text-left text-xl">WebQuizApp</h1>
                 </div>
               </article>
             </button>
@@ -274,9 +293,7 @@
                   alt=""
                 />
                 <div class="p-4">
-                  <h1 class="text-left text-xl">
-                    Tienda online
-                  </h1>
+                  <h1 class="text-left text-xl">Tienda online</h1>
                 </div>
               </article>
             </button>
