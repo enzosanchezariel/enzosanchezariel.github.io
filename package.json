@@ -6,11 +6,15 @@
   "scripts": {
     "tw:b": "npx @tailwindcss/cli -i ./static/css/input.css -o ./static/css/output.css --minify",
     "tw:w": "npx @tailwindcss/cli -i ./static/css/input.css -o ./static/css/output.css --watch",
-    "lsv": "npx live-server --host=0.0.0.0"
+    "lsv": "npx live-server --host=0.0.0.0",
+    "f:w": "flask run --debug --host=0.0.0.0",
+    "f:h": "flask run --host=0.0.0.0",
+    "f:s": "flask shell"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
+    "prettier-plugin-jinja-template": "^2.1.0",
     "live-server": "^1.2.2"
   }
 }

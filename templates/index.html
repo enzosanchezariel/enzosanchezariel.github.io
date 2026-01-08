@@ -12,7 +12,7 @@
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="static/css/output.css"
+      href="{{ url_for('static', filename='css/output.css') }}"
     />
     <style>
       @view-transition {
@@ -58,9 +58,11 @@
             <img
               src="https://picsum.photos/200"
               alt=""
-              class="mt-4 block w-full sm:hidden sm:h-full sm:w-auto sm:object-contain lg:mt-6"
+              class="mt-4 block w-full max-w-[20rem] self-center sm:hidden sm:h-full sm:w-auto sm:max-w-full sm:self-auto sm:object-contain lg:mt-6"
             />
-            <div class="mt-4 flex flex-wrap gap-2 lg:mt-6">
+            <div
+              class="mt-4 flex flex-wrap gap-2 self-center sm:self-auto lg:mt-6"
+            >
               <a
                 class="cursor-pointer rounded-sm bg-emerald-600 px-3 py-2 text-white transition hover:bg-emerald-700 active:scale-90 active:bg-emerald-700"
                 href="/static/files/Enzo Sanchez CV.pdf"
@@ -82,7 +84,7 @@
                 </div>
               </a>
               <a
-                class="cursor-pointer rounded-sm px-3 py-2 text-gray-800 transition hover:bg-emerald-200 active:scale-90 active:bg-emerald-200"
+                class="cursor-pointer rounded-sm px-2 py-2 text-gray-800 transition hover:bg-emerald-200 active:scale-90 active:bg-emerald-200 sm:px-3"
                 href="https://www.linkedin.com/in/enzosanchezariel/"
                 target="_blank"
               >
@@ -99,11 +101,11 @@
                       d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1"
                     />
                   </svg>
-                  <p>LinkedIn</p>
+                  <p class="hidden sm:block">LinkedIn</p>
                 </div>
               </a>
               <a
-                class="cursor-pointer rounded-sm px-3 py-2 text-gray-800 transition hover:bg-emerald-200 active:scale-90 active:bg-emerald-200"
+                class="cursor-pointer rounded-sm px-2 py-2 text-gray-800 transition hover:bg-emerald-200 active:scale-90 active:bg-emerald-200 sm:px-3"
                 href="https://github.com/enzosanchezariel"
                 target="_blank"
               >
@@ -120,7 +122,7 @@
                       d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z"
                     />
                   </svg>
-                  <p>Github</p>
+                  <p class="hidden sm:block">Github</p>
                 </div>
               </a>
             </div>
@@ -143,103 +145,231 @@
           class="p-4 lg:p-6 [&>h2]:pb-3 [&>h2]:text-3xl [&>h2]:text-emerald-600"
         >
           <h2>Tecnologías</h2>
-          <article>
-            <h1>Lenguajes de Programación</h1>
-            <ul>
-              <li>Java</li>
-              <li>Python</li>
-              <li>JavaScript</li>
-            </ul>
-          </article>
-          <article>
-            <h1>Desarrollo Frontend</h1>
-            <ul>
-              <li>Svelte</li>
-              <li>HTMX</li>
-            </ul>
-          </article>
-          <article>
-            <h1>Desarrollo Backend</h1>
-            <ul>
-              <li>Spring Boot</li>
-              <li>Flask</li>
-              <li>Express</li>
-            </ul>
-          </article>
-          <article>
-            <h1>Diseño y administración de bases de datos SQL</h1>
-            <ul>
-              <li>MySQL</li>
-            </ul>
-          </article>
-          <article>
-            <h1>Diseño y Animación</h1>
-            <ul>
-              <li>Adobe Animate</li>
-              <li>Adobe Illustrator</li>
-              <li>Adobe After Effects</li>
-            </ul>
-          </article>
+          <div
+            class="flex flex-col text-gray-800 [&>article]:flex [&>article]:flex-col [&>article]:items-center [&>article]:justify-center"
+          >
+            <article>
+              <h1 class="pb-2">Lenguajes de Programación</h1>
+              <ul
+                class="flex flex-row flex-wrap items-center justify-center gap-4"
+              >
+                <li
+                  class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
+                >
+                  <img
+                    class="w-6"
+                    src="{{ url_for('static', filename='resources/JAVA ICON.svg') }}"
+                    alt="Java icon"
+                  />
+                  <p>Java</p>
+                </li>
+                <li
+                  class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
+                >
+                  <img
+                    class="w-6"
+                    src="{{ url_for('static', filename='resources/PYTHON ICON.svg') }}"
+                    alt="Python icon"
+                  />
+                  <p>Python</p>
+                </li>
+                <li
+                  class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
+                >
+                  <img
+                    class="w-6"
+                    src="{{ url_for('static', filename='resources/JS ICON.svg') }}"
+                    alt="JavaScript icon"
+                  />
+                  <p>JavaScript</p>
+                </li>
+              </ul>
+            </article>
+            <article>
+              <h1 class="pt-4 pb-2">Desarrollo Frontend</h1>
+              <ul
+                class="flex flex-row flex-wrap items-center justify-center gap-4"
+              >
+                <li
+                  class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
+                >
+                  <img
+                    class="w-6"
+                    src="{{ url_for('static', filename='resources/SVELTE ICON.svg') }}"
+                    alt="Svelte icon"
+                  />
+                  <p>Svelte</p>
+                </li>
+                <li
+                  class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
+                >
+                  <img
+                    class="w-6"
+                    src="{{ url_for('static', filename='resources/HTMX ICON.svg') }}"
+                    alt="HTMX icon"
+                  />
+                  <p>HTMX</p>
+                </li>
+              </ul>
+            </article>
+            <article>
+              <h1 class="pt-4 pb-2">Desarrollo Backend</h1>
+              <ul
+                class="flex flex-row flex-wrap items-center justify-center gap-4"
+              >
+                <li
+                  class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
+                >
+                  <img
+                    class="w-6"
+                    src="{{ url_for('static', filename='resources/SPRING BOOT ICON.svg') }}"
+                    alt="Spring Boot icon"
+                  />
+                  <p>Spring Boot</p>
+                </li>
+                <li
+                  class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
+                >
+                  <img
+                    class="w-6"
+                    src="{{ url_for('static', filename='resources/FLASK ICON.svg') }}"
+                    alt="Flask icon"
+                  />
+                  <p>Flask</p>
+                </li>
+                <li
+                  class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
+                >
+                  <img
+                    class="w-6"
+                    src="{{ url_for('static', filename='resources/EXPRESS ICON.svg') }}"
+                    alt="Express icon"
+                  />
+                  <p>Express</p>
+                </li>
+              </ul>
+            </article>
+            <article>
+              <h1 class="pt-4 pb-2">
+                Diseño y administración de bases de datos SQL
+              </h1>
+              <ul
+                class="flex flex-row flex-wrap items-center justify-center gap-4"
+              >
+                <li
+                  class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
+                >
+                  <img
+                    class="w-6"
+                    src="{{ url_for('static', filename='resources/MYSQL ICON.svg') }}"
+                    alt="MySQL icon"
+                  />
+                  <p>MySQL</p>
+                </li>
+              </ul>
+            </article>
+            <article>
+              <h1 class="pt-4 pb-2">Diseño y Animación</h1>
+              <ul
+                class="flex flex-row flex-wrap items-center justify-center gap-4"
+              >
+                <li
+                  class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
+                >
+                  <img
+                    class="w-6"
+                    src="{{ url_for('static', filename='resources/ADOBE ANIMATE ICON.svg') }}"
+                    alt="Adobe Animate icon"
+                  />
+                  <p>Adobe Animate</p>
+                </li>
+                <li
+                  class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
+                >
+                  <img
+                    class="w-6"
+                    src="{{ url_for('static', filename='resources/ADOBE ILLUSTRATOR ICON.svg') }}"
+                    alt="Adobe Illustrator icon"
+                  />
+                  <p>Adobe Illustrator</p>
+                </li>
+                <li
+                  class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
+                >
+                  <img
+                    class="w-6"
+                    src="{{ url_for('static', filename='resources/ADOBE AFTER EFFECTS ICON.svg') }}"
+                    alt="Adobe After Effects icon"
+                  />
+                  <p>Adobe After Effects</p>
+                </li>
+              </ul>
+            </article>
+          </div>
           <h2 class="pt-6">Proyectos</h2>
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <button
-              class="flex cursor-pointer overflow-clip rounded-sm border-1 border-slate-200 transition hover:border-emerald-50 hover:bg-emerald-50 active:scale-90 active:bg-emerald-50"
+          <div class="flex justify-center">
+            <div
+              class="grid w-full grid-cols-1 place-items-center gap-4 sm:max-w-full sm:grid-cols-2 lg:grid-cols-3"
             >
-              <article class="flex w-full flex-col">
-                <img
-                  class="h-auto w-full border-b-1 border-slate-200"
-                  src="https://picsum.photos/300/200"
-                  alt=""
-                />
-                <div class="p-4">
-                  <h1 class="text-left text-xl">DraBeh</h1>
-                </div>
-              </article>
-            </button>
-            <button
-              class="flex overflow-clip rounded-sm border-1 border-slate-200 transition hover:border-emerald-50 hover:bg-emerald-50 active:scale-90 active:border-emerald-50 active:bg-emerald-50"
-            >
-              <article class="flex w-full flex-col">
-                <img
-                  class="h-auto w-full border-b-1 border-slate-200"
-                  src="https://picsum.photos/300/200"
-                  alt=""
-                />
-                <div class="p-4">
-                  <h1 class="text-left text-xl">
-                    Planificador de Horarios UTN
-                  </h1>
-                </div>
-              </article>
-            </button>
-            <button
-              class="flex overflow-clip rounded-sm border-1 border-slate-200 transition hover:border-emerald-50 hover:bg-emerald-50 active:scale-90 active:border-emerald-50 active:bg-emerald-50"
-            >
-              <article class="flex w-full flex-col">
-                <img
-                  class="h-auto w-full border-b-1 border-slate-200"
-                  src="https://picsum.photos/300/200"
-                  alt=""
-                />
-                <div class="p-4">
-                  <h1 class="text-left text-xl">WebQuizApp</h1>
-                </div>
-              </article>
-            </button>
-            <button
-              class="flex overflow-clip rounded-sm border-1 border-slate-200 transition hover:border-emerald-50 hover:bg-emerald-50 active:scale-90 active:border-emerald-50 active:bg-emerald-50"
-            >
-              <article class="flex w-full flex-col">
-                <img
-                  class="h-auto w-full border-b-1 border-slate-200"
-                  src="https://picsum.photos/300/200"
-                  alt=""
-                />
-                <div class="p-4">
-                  <h1 class="text-left text-xl">Tienda online</h1>
-                </div>
-              </article>
-            </button>
+              <button
+                class="flex h-full w-full max-w-[20rem] cursor-pointer overflow-clip rounded-sm outline-1 outline-slate-200 transition hover:bg-emerald-200 hover:outline-0 active:scale-90 active:bg-emerald-200 active:outline-0"
+              >
+                <article class="flex w-full flex-col">
+                  <img
+                    class="h-auto w-full border-slate-200"
+                    src="https://picsum.photos/300/200"
+                    alt=""
+                  />
+                  <div class="p-4">
+                    <h1 class="truncate text-left text-xl">DraBeh</h1>
+                  </div>
+                </article>
+              </button>
+              <button
+                class="flex h-full w-full max-w-[20rem] cursor-pointer overflow-clip rounded-sm outline-1 outline-slate-200 transition hover:bg-emerald-200 hover:outline-0 active:scale-90 active:bg-emerald-200 active:outline-0"
+              >
+                <article class="flex w-full flex-col">
+                  <img
+                    class="h-auto w-full border-slate-200"
+                    src="https://picsum.photos/300/200"
+                    alt=""
+                  />
+                  <div class="p-4">
+                    <h1 class="truncate text-left text-xl">
+                      Planificador de Horarios UTN
+                    </h1>
+                  </div>
+                </article>
+              </button>
+              <button
+                class="flex h-full w-full max-w-[20rem] cursor-pointer overflow-clip rounded-sm outline-1 outline-slate-200 transition hover:bg-emerald-200 hover:outline-0 active:scale-90 active:bg-emerald-200 active:outline-0"
+              >
+                <article class="flex w-full flex-col">
+                  <img
+                    class="h-auto w-full border-slate-200"
+                    src="https://picsum.photos/300/200"
+                    alt=""
+                  />
+                  <div class="p-4">
+                    <h1 class="truncate text-left text-xl">WebQuizApp</h1>
+                  </div>
+                </article>
+              </button>
+              <button
+                class="flex h-full w-full max-w-[20rem] cursor-pointer overflow-clip rounded-sm outline-1 outline-slate-200 transition hover:bg-emerald-200 hover:outline-0 active:scale-90 active:bg-emerald-200 active:outline-0"
+              >
+                <article class="flex w-full flex-col">
+                  <img
+                    class="h-auto w-full border-slate-200"
+                    src="https://picsum.photos/300/200"
+                    alt=""
+                  />
+                  <div class="p-4">
+                    <h1 class="truncate text-left text-xl">Tienda online</h1>
+                  </div>
+                </article>
+              </button>
+            </div>
           </div>
           <h2 class="pt-6">Contacto</h2>
           <form action=""></form>
