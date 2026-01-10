@@ -1,4 +1,5 @@
-{% from "components/tech-pill.html" import techpill %} {% extends "base.html" %}
+{% from "components/tech-pill.html" import techpill %}
+{% extends "base.html" %}
 {% block content %}
   <div
     class="flex w-full flex-col items-center justify-center border-b-1 border-slate-200 bg-white"
@@ -114,26 +115,8 @@
               class="flex flex-row flex-wrap items-center justify-center gap-4"
             >
               {{ techpill( "Java", url_for('static', filename='resources/JAVA ICON.svg'), "Java icon" ) }}
-              <li
-                class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
-              >
-                <img
-                  class="w-6"
-                  src="{{ url_for('static', filename='resources/PYTHON ICON.svg') }}"
-                  alt="Python icon"
-                />
-                <p>Python</p>
-              </li>
-              <li
-                class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
-              >
-                <img
-                  class="w-6"
-                  src="{{ url_for('static', filename='resources/JS ICON.svg') }}"
-                  alt="JavaScript icon"
-                />
-                <p>JavaScript</p>
-              </li>
+              {{ techpill( "Python", url_for('static', filename='resources/PYTHON ICON.svg'), "Python icon" ) }}
+              {{ techpill( "JavaScript", url_for('static', filename='resources/JS ICON.svg'), "JavaScript icon" ) }}
             </ul>
           </article>
           <article class="border-b-1 border-slate-200 pb-6">
@@ -141,26 +124,8 @@
             <ul
               class="flex flex-row flex-wrap items-center justify-center gap-4"
             >
-              <li
-                class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
-              >
-                <img
-                  class="w-6"
-                  src="{{ url_for('static', filename='resources/SVELTE ICON.svg') }}"
-                  alt="Svelte icon"
-                />
-                <p>Svelte</p>
-              </li>
-              <li
-                class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
-              >
-                <img
-                  class="w-6"
-                  src="{{ url_for('static', filename='resources/HTMX ICON.svg') }}"
-                  alt="HTMX icon"
-                />
-                <p>HTMX</p>
-              </li>
+              {{ techpill( "Svelte", url_for('static', filename='resources/SVELTE ICON.svg'), "Svelte icon" ) }}
+              {{ techpill( "HTMX", url_for('static', filename='resources/HTMX ICON.svg'), "HTMX icon" ) }}
             </ul>
           </article>
           <article class="border-b-1 border-slate-200 pb-6">
@@ -168,36 +133,9 @@
             <ul
               class="flex flex-row flex-wrap items-center justify-center gap-4"
             >
-              <li
-                class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
-              >
-                <img
-                  class="w-6"
-                  src="{{ url_for('static', filename='resources/SPRING BOOT ICON.svg') }}"
-                  alt="Spring Boot icon"
-                />
-                <p>Spring Boot</p>
-              </li>
-              <li
-                class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
-              >
-                <img
-                  class="w-6"
-                  src="{{ url_for('static', filename='resources/FLASK ICON.svg') }}"
-                  alt="Flask icon"
-                />
-                <p>Flask</p>
-              </li>
-              <li
-                class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
-              >
-                <img
-                  class="w-6"
-                  src="{{ url_for('static', filename='resources/EXPRESS ICON.svg') }}"
-                  alt="Express icon"
-                />
-                <p>Express</p>
-              </li>
+              {{ techpill( "Spring Boot", url_for('static', filename='resources/SPRING BOOT ICON.svg'), "Spring Boot icon" ) }}
+              {{ techpill( "Flask", url_for('static', filename='resources/FLASK ICON.svg'), "Flask icon" ) }}
+              {{ techpill( "Express", url_for('static', filename='resources/EXPRESS ICON.svg'), "Express icon" ) }}
             </ul>
           </article>
           <article class="border-b-1 border-slate-200 pb-6">
@@ -207,16 +145,7 @@
             <ul
               class="flex flex-row flex-wrap items-center justify-center gap-4"
             >
-              <li
-                class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
-              >
-                <img
-                  class="w-6"
-                  src="{{ url_for('static', filename='resources/MYSQL ICON.svg') }}"
-                  alt="MySQL icon"
-                />
-                <p>MySQL</p>
-              </li>
+              {{ techpill( "MySQL", url_for('static', filename='resources/MYSQL ICON.svg'), "MySQL icon" ) }}
             </ul>
           </article>
           <article>
@@ -224,36 +153,9 @@
             <ul
               class="flex flex-row flex-wrap items-center justify-center gap-4"
             >
-              <li
-                class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
-              >
-                <img
-                  class="w-6"
-                  src="{{ url_for('static', filename='resources/ADOBE ANIMATE ICON.svg') }}"
-                  alt="Adobe Animate icon"
-                />
-                <p>Adobe Animate</p>
-              </li>
-              <li
-                class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
-              >
-                <img
-                  class="w-6"
-                  src="{{ url_for('static', filename='resources/ADOBE ILLUSTRATOR ICON.svg') }}"
-                  alt="Adobe Illustrator icon"
-                />
-                <p>Adobe Illustrator</p>
-              </li>
-              <li
-                class="flex flex-row items-center gap-2 rounded-full px-3 py-1 outline-1 outline-slate-200"
-              >
-                <img
-                  class="w-6"
-                  src="{{ url_for('static', filename='resources/ADOBE AFTER EFFECTS ICON.svg') }}"
-                  alt="Adobe After Effects icon"
-                />
-                <p>Adobe After Effects</p>
-              </li>
+              {{ techpill( "Adobe Animate", url_for('static', filename='resources/ADOBE ANIMATE ICON.svg'), "Adobe Animate icon" ) }}
+              {{ techpill( "Adobe Illustrator", url_for('static', filename='resources/ADOBE ILLUSTRATOR ICON.svg'), "Adobe Illustrator icon" ) }}
+              {{ techpill( "Adobe After Effects", url_for('static', filename='resources/ADOBE AFTER EFFECTS ICON.svg'), "Adobe After Effects icon" ) }}
             </ul>
           </article>
         </div>
