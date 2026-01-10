@@ -1,0 +1,9 @@
+<h1>{{ subject }}</h1>
+<hr />
+<p>FROM {{ name }}</p>
+<hr />
+<p>EMAIL {{ email }}</p>
+<hr />
+{% for line in message.split('\n') %}
+<p>{{ line }}</p>
+{% endfor %}
