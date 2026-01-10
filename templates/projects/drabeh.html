@@ -1,0 +1,85 @@
+{% extends "base.html" %} {% block content %}
+<div class="flex min-h-screen w-full flex-col items-center">
+  <div
+    class="w-full flex-1 border-slate-200 bg-white xl:max-w-6xl xl:border-x-1"
+  >
+    <div class="embla overflow-hidden border-b-1 border-slate-200 bg-[#fbfbfb]">
+      <div class="embla__viewport relative">
+        <div
+          class="embla__container flex [&>.embla\_\_slide]:flex [&>.embla\_\_slide]:min-w-0 [&>.embla\_\_slide]:shrink-0 [&>.embla\_\_slide]:grow-0 [&>.embla\_\_slide]:basis-full [&>.embla\_\_slide]:justify-center"
+        >
+          <div class="embla__slide">
+            <img
+              src="https://picsum.photos/300/200"
+              class="h-auto w-full max-w-120"
+            />
+          </div>
+          <div class="embla__slide">
+            <img
+              src="https://picsum.photos/300/200"
+              class="h-auto w-full max-w-120"
+            />
+          </div>
+          <div class="embla__slide">
+            <img
+              src="https://picsum.photos/300/200"
+              class="h-auto w-full max-w-120"
+            />
+          </div>
+        </div>
+        <button
+          class="embla__prev absolute top-1/2 left-2 z-10 flex -translate-y-1/2 cursor-pointer rounded-sm p-1 text-[#000000]/25 transition hover:bg-gray-200 hover:text-gray-400 active:scale-90 active:bg-gray-200 active:text-gray-400"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M15 6l-6 6l6 6" />
+          </svg>
+        </button>
+        <button
+          class="embla__next absolute top-1/2 right-2 z-10 -translate-y-1/2 cursor-pointer rounded-sm p-1 text-[#000000]/25 transition hover:bg-gray-200 hover:text-gray-400 active:scale-90 active:bg-gray-200 active:text-gray-400"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M9 6l6 6l-6 6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script type="text/javascript">
+      const rootNode = document.querySelector(".embla");
+      const viewportNode = rootNode.querySelector(".embla__viewport");
+
+      const prevButtonNode = rootNode.querySelector(".embla__prev");
+      const nextButtonNode = rootNode.querySelector(".embla__next");
+
+      const embla = EmblaCarousel(viewportNode);
+
+      prevButtonNode.addEventListener("click", embla.scrollPrev, false);
+      nextButtonNode.addEventListener("click", embla.scrollNext, false);
+    </script>
+    <div class="p-4 lg:p-6">
+      <h1 class="text-3xl text-emerald-600">DraBeh</h1>
+    </div>
+  </div>
+</div>
+{% endblock %}
