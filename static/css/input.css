@@ -3,3 +3,18 @@
 .no-callout {
   -webkit-touch-callout: none;
 }
+
+.slidefade {
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition:
+    opacity 150ms ease,
+    transform 150ms ease;
+}
+
+.slidefade.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}

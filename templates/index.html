@@ -164,64 +164,45 @@
           <div
             class="grid w-full grid-cols-1 place-items-center gap-4 sm:max-w-full sm:grid-cols-2 lg:grid-cols-3"
           >
-            <button
-              class="flex h-full w-full max-w-[20rem] cursor-pointer overflow-clip rounded-sm outline-1 outline-slate-200 transition hover:bg-emerald-200 hover:outline-0 active:scale-90 active:bg-emerald-200 active:outline-0"
-            >
-              <article class="flex w-full flex-col">
-                <img
-                  class="h-auto w-full border-slate-200"
-                  src="https://picsum.photos/300/200"
-                  alt=""
-                />
-                <div class="p-4">
-                  <h1 class="truncate text-left text-xl">DraBeh</h1>
-                </div>
-              </article>
-            </button>
-            <button
-              class="flex h-full w-full max-w-[20rem] cursor-pointer overflow-clip rounded-sm outline-1 outline-slate-200 transition hover:bg-emerald-200 hover:outline-0 active:scale-90 active:bg-emerald-200 active:outline-0"
-            >
-              <article class="flex w-full flex-col">
-                <img
-                  class="h-auto w-full border-slate-200"
-                  src="https://picsum.photos/300/200"
-                  alt=""
-                />
-                <div class="p-4">
-                  <h1 class="truncate text-left text-xl">
-                    Planificador de Horarios UTN
-                  </h1>
-                </div>
-              </article>
-            </button>
-            <button
-              class="flex h-full w-full max-w-[20rem] cursor-pointer overflow-clip rounded-sm outline-1 outline-slate-200 transition hover:bg-emerald-200 hover:outline-0 active:scale-90 active:bg-emerald-200 active:outline-0"
-            >
-              <article class="flex w-full flex-col">
-                <img
-                  class="h-auto w-full border-slate-200"
-                  src="https://picsum.photos/300/200"
-                  alt=""
-                />
-                <div class="p-4">
-                  <h1 class="truncate text-left text-xl">WebQuizApp</h1>
-                </div>
-              </article>
-            </button>
-            <button
-              class="flex h-full w-full max-w-[20rem] cursor-pointer overflow-clip rounded-sm outline-1 outline-slate-200 transition hover:bg-emerald-200 hover:outline-0 active:scale-90 active:bg-emerald-200 active:outline-0"
-            >
-              <article class="flex w-full flex-col">
-                <img
-                  class="h-auto w-full border-slate-200"
-                  src="https://picsum.photos/300/200"
-                  alt=""
-                />
-                <div class="p-4">
-                  <h1 class="truncate text-left text-xl">Tienda online</h1>
-                </div>
-              </article>
-            </button>
+            {%
+              set projects = [
+              {
+                'name': 'DraBeh',
+                'dir': 'drabeh'
+              },
+              {
+                'name': 'Planificador de Horarios UTN',
+                'dir': 'planificador-horarios-utn'
+              },
+              {
+                'name': 'WebQuizApp',
+                'dir': 'webquizapp'
+              },
+              {
+                'name': 'Tienda online',
+                'dir': 'tienda-online'
+              },
+              ]
+            %}
+            {% for project in projects %}
+              <a
+                href="{{ url_for('pages.projects', page=project.dir ) }}"
+                class="flex h-full w-full max-w-[20rem] cursor-pointer overflow-clip rounded-sm outline-1 outline-slate-200 transition hover:scale-105 hover:bg-emerald-200 hover:outline-0 active:scale-90 active:bg-emerald-200 active:outline-0"
+              >
+                <article class="flex w-full flex-col">
+                  <img
+                    class="h-auto w-full border-slate-200"
+                    src="https://picsum.photos/300/200"
+                    alt=""
+                  />
+                  <div class="p-4">
+                    <h1 class="truncate text-left text-xl">
+                      {{ project.name }}
+                    </h1>
+                  </div>
+                </article>
+              </a>
+            {% endfor %}
           </div>
         </div>
         <h2 class="py-6 text-center text-3xl text-emerald-600">Contacto</h2>
@@ -229,26 +210,24 @@
           <form
             action="{{ url_for('email.email') }}"
             method="post"
-            class="w-full max-w-2xl"
+            onsubmit="contactFormSubmit(event)"
+            class="w-full max-w-2xl text-gray-800"
           >
             <div class="mb-4 flex flex-col">
-              <label class="mb-1 text-slate-500" for="contact-name"
-                >Nombre</label
-              >
+              <label class="mb-1" for="contact-name">Nombre y apellido</label>
               <input
-                class="rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-slate-500 focus:outline-slate-300"
+                class="rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-emerald-500 focus:outline-emerald-300"
                 type="text"
                 id="contact-name"
                 name="name"
+                pattern="^(?!\s*$).+"
                 required
               />
             </div>
             <div class="mb-4 flex flex-col">
-              <label class="mb-1 text-slate-500" for="contact-email"
-                >Email</label
-              >
+              <label class="mb-1" for="contact-email">Email</label>
               <input
-                class="rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-slate-500 focus:outline-slate-300"
+                class="rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-emerald-500 focus:outline-emerald-300"
                 type="email"
                 id="contact-email"
                 name="email"
@@ -256,55 +235,111 @@
               />
             </div>
             <div class="mb-4 flex flex-col">
-              <label class="mb-1 text-slate-500" for="contact-subject"
-                >Asunto</label
-              >
+              <label class="mb-1" for="contact-subject">Asunto</label>
               <input
-                class="rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-slate-500 focus:outline-slate-300"
+                class="rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-emerald-500 focus:outline-emerald-300"
                 type="text"
                 id="contact-subject"
                 name="subject"
+                pattern="^(?!\s*$).+"
                 required
               />
             </div>
             <div class="mb-4 flex flex-col">
-              <label class="mb-1 text-slate-500" for="contact-message"
-                >Mensaje</label
-              >
+              <label class="mb-1" for="contact-message">Mensaje</label>
               <textarea
-                class="h-50 resize-none rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-slate-500 focus:outline-slate-300"
+                class="h-50 resize-none rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-emerald-500 focus:outline-emerald-300"
                 id="contact-message"
                 name="message"
+                minlength="1"
                 required
               ></textarea>
-              <button
-                class="mt-4 flex w-full flex-row justify-center gap-2 rounded-sm bg-emerald-600 px-3 py-2 text-white transition hover:bg-emerald-700 active:scale-90 active:bg-emerald-700 enabled:cursor-pointer disabled:bg-gray-400"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path
-                    d="M13 19h-8a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v6"
-                  />
-                  <path d="M3 7l9 6l9 -6" />
-                  <path d="M16 22l5 -5" />
-                  <path d="M21 21.5v-4.5h-4.5" />
-                </svg>
-                <p>Enviar mensaje</p>
-              </button>
             </div>
+            <button
+              id="contact-submit-btn"
+              class="mt-4 flex w-full flex-row justify-center gap-2 rounded-sm bg-emerald-600 px-3 py-2 text-white transition hover:bg-emerald-700 active:bg-emerald-700 enabled:cursor-pointer enabled:active:scale-90 disabled:bg-gray-400"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M13 19h-8a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v6"
+                />
+                <path d="M3 7l9 6l9 -6" />
+                <path d="M16 22l5 -5" />
+                <path d="M21 21.5v-4.5h-4.5" />
+              </svg>
+              <p>Enviar mensaje</p>
+            </button>
           </form>
         </div>
       </div>
     </div>
   </div>
+  <p
+    id="toast"
+    class="slidefade fixed bottom-2 left-1/2 z-10 -translate-x-1/2 rounded-sm bg-white p-4 shadow-xl/20 outline-1 outline-slate-200"
+  ></p>
+  <script>
+    async function showToast(message, isError = false) {
+      const toast = document.getElementById("toast");
+      isError
+        ? toast.classList.add("text-red-600")
+        : toast.classList.remove("text-red-600");
+      toast.textContent = message;
+      toast.classList.add("show");
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      toast.classList.remove("show");
+    }
+
+    async function contactFormSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const submitButton = document.getElementById("contact-submit-btn");
+
+      formData = new FormData(form);
+
+      submitButton.disabled = true;
+
+      if (formData.get("message").trim().length === 0) {
+        await showToast("El mensaje no puede estar vacío.", true);
+        submitButton.disabled = false;
+        return;
+      }
+
+      submitButton.classList.add("animate-pulse");
+
+      fetch(/*form.action*/ "/", {
+        method: "POST",
+        body: formData,
+      })
+        .then(async (response) => {
+          if (response.ok) {
+            await showToast("Mensaje enviado con éxito.");
+
+            form.reset();
+          } else {
+            submitButton.classList.remove("animate-pulse");
+            await showToast("Error al enviar el mensaje.", true);
+          }
+        })
+        .catch(async () => {
+          submitButton.classList.remove("animate-pulse");
+          await showToast("Error al enviar el mensaje.", true);
+        })
+        .finally(() => {
+          submitButton.classList.remove("animate-pulse");
+          submitButton.disabled = false;
+        });
+    }
+  </script>
 {% endblock %}
