@@ -1,359 +1,51 @@
-{% from "components/tech-pill.html" import techpill %}
-{% extends "base.html" %}
-{% block content %}
-  <div id="mainView" class="flex min-h-screen w-full flex-col items-center">
-    <div
-      class="w-full flex-1 border-slate-200 bg-white xl:max-w-6xl xl:border-x-1"
-    >
-      <div
-        class="embla overflow-hidden border-b-1 border-slate-200 bg-[#fbfbfb]"
-      >
-        <div class="embla__viewport relative">
-          <div
-            class="embla__container flex [&>.embla\_\_slide]:flex [&>.embla\_\_slide]:min-w-0 [&>.embla\_\_slide]:shrink-0 [&>.embla\_\_slide]:grow-0 [&>.embla\_\_slide]:basis-full [&>.embla\_\_slide]:justify-center"
-          >
-            <button class="embla__slide" onclick="viewImage(this)">
-              <img
-                src="https://picsum.photos/id/247/300/200"
-                style="view-transition-name: {{ 'img-' + page }};"
-                crosspagetransition="{{ 'img-' + page }}"
-                class="aspect-3/2 h-auto w-full max-w-120 bg-gray-200 lg:max-w-170"
-              />
-            </button>
-            <button class="embla__slide" onclick="viewImage(this)">
-              <img
-                src="https://picsum.photos/id/477/300/200"
-                class="aspect-3/2 h-auto w-full max-w-120 bg-gray-200 lg:max-w-170"
-              />
-            </button>
-            <button class="embla__slide" onclick="viewImage(this)">
-              <img
-                src="https://picsum.photos/id/149/300/200"
-                class="aspect-3/2 h-auto w-full max-w-120 bg-gray-200 lg:max-w-170"
-              />
-            </button>
-          </div>
-          <button
-            class="embla__prev absolute top-1/2 left-2 z-10 flex -translate-y-1/2 cursor-pointer rounded-sm bg-[#ffffff]/50 p-1 text-[#000000]/25 transition hover:bg-gray-200 hover:text-gray-400 active:scale-90 active:bg-gray-200 active:text-gray-400"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M15 6l-6 6l6 6" />
-            </svg>
-          </button>
-          <button
-            class="embla__next absolute top-1/2 right-2 z-10 -translate-y-1/2 cursor-pointer rounded-sm bg-[#ffffff]/50 p-1 text-[#000000]/25 transition hover:bg-gray-200 hover:text-gray-400 active:scale-90 active:bg-gray-200 active:text-gray-400"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 6l6 6l-6 6" />
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div class="p-4 lg:p-6">
-        <h1
-          style="view-transition-name: {{ 'title-' + page }};"
-          crosspagetransition="{{ 'title-' + page }}"
-          class="w-min pb-6 text-3xl text-emerald-600"
-        >
-          DraBeh
-        </h1>
-        <div class="grid gap-4 lg:grid-cols-2">
-          <article
-            class="rounded-sm border-gray-200 text-gray-800 lg:border-1 lg:p-6 [&>p]:mb-2"
-          >
-            <h1 class="mb-3 text-lg font-semibold text-emerald-600">
-              Descripción
-            </h1>
-            <p>
-              Una plataforma donde las personas se comunican a través de dibujos
-              en lugar de palabras.
-            </p>
-            <p>
-              La premisa es simple: Cáda post puede contener un dibujo, y el
-              mismo puede ser respondido con otro dibujo. De esta manera, se
-              crean hilos visuales de conversación entre los usuarios.
-            </p>
-            <p>
-              Cada pieza de arte es creada dentro del lienzo de dibujo del
-              sitio, asegurando que todo el contenido sea autentico. De esta
-              manera, no existen problemas de plagio ni calcado ni re-uploads ni
-              trampas similares.
-            </p>
-          </article>
-          <article
-            class="rounded-sm border-gray-200 text-gray-800 lg:border-1 lg:p-6 [&>p]:mb-2"
-          >
-            <h1 class="mb-3 text-lg font-semibold text-emerald-600">
-              Características
-            </h1>
-            <ul class="flex flex-col gap-4">
-              <li>Autenticación con Google OAuth</li>
-              <li>Pago de membresía con Paypal</li>
-              <li>Envío de emails de confirmación automáticos</li>
-              <li>Sistema de moderación con reportes y baneos</li>
-            </ul>
-          </article>
-        </div>
-        <article class="mt-4 text-gray-800 [&>p]:mb-2">
-          <h1 class="mb-3 text-lg font-semibold text-emerald-600">
-            Tecnologías
-          </h1>
-          <ul class="flex flex-row flex-wrap items-center justify-center gap-4">
-            {{ techpill( "JavaScript", url_for('static', filename='resources/JS ICON.svg'), "JavaScript icon" ) }}
-            {{ techpill( "Python", url_for('static', filename='resources/PYTHON ICON.svg'), "Python icon" ) }}
-            {{ techpill( "HTMX", url_for('static', filename='resources/HTMX ICON.svg'), "HTMX icon" ) }}
-            {{ techpill( "MySQL", url_for('static', filename='resources/MYSQL ICON.svg'), "MySQL icon" ) }}
-            {{ techpill( "Adobe Illustrator", url_for('static', filename='resources/ADOBE ILLUSTRATOR ICON.svg'), "Adobe Illustrator icon" ) }}
-            {{ techpill( "Adobe After Effects", url_for('static', filename='resources/ADOBE AFTER EFFECTS ICON.svg'), "Adobe After Effects icon" ) }}
-            <!-- Lottie -->
-            <!-- Cloudflare -->
-            <!-- Git -->
-            <!-- Nginx -->
-            <!-- GSAP -->
-            <!-- Tailwind CSS -->
-          </ul>
-        </article>
-        <div class="flex justify-center">
-          <div
-            class="mt-4 flex w-full flex-col gap-2 sm:max-w-[75%] sm:flex-row sm:items-stretch"
-          >
-            <a
-              href="#"
-              target="_blank"
-              class="flex w-full cursor-pointer flex-row justify-center gap-2 rounded-sm px-3 py-2 text-gray-800 transition hover:bg-emerald-200 active:scale-90 active:bg-emerald-200 enabled:cursor-pointer disabled:bg-gray-400"
-            >
-              <p>Código fuente</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
-                />
-                <path d="M11 13l9 -9" />
-                <path d="M15 4h5v5" />
-              </svg>
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              class="flex w-full cursor-pointer flex-row justify-center gap-2 rounded-sm bg-emerald-600 px-3 py-2 text-white transition hover:bg-emerald-700 active:scale-90 active:bg-emerald-700 enabled:cursor-pointer disabled:bg-gray-400"
-            >
-              <p>Ver en producción</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
-                />
-                <path d="M11 13l9 -9" />
-                <path d="M15 4h5v5" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    id="imageView"
-    class="relative flex h-svh touch-pinch-zoom items-center justify-center bg-black"
-    hidden
-  >
-    <img
-      id="imageViewImage"
-      style="view-transition-name: imageView;"
-      src=""
-      alt=""
-      class="h-auto w-full"
-    />
-    <button
-      onclick="history.back()"
-      class="absolute top-6 right-2 z-10 flex -translate-y-1/2 cursor-pointer rounded-sm bg-[#ffffff]/50 p-1 text-[#000000]/25 transition hover:bg-gray-200 hover:text-gray-400 active:scale-90 active:bg-gray-200 active:text-gray-400"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M18 6l-12 12" />
-        <path d="M6 6l12 12" />
-      </svg>
-    </button>
-  </div>
-  <script type="text/javascript">
-    const rootNode = document.querySelector(".embla");
-    const viewportNode = rootNode.querySelector(".embla__viewport");
+{% extends "projects/project-base.html" %}
 
-    const prevButtonNode = rootNode.querySelector(".embla__prev");
-    const nextButtonNode = rootNode.querySelector(".embla__next");
+{%
+  set images = [
+  "https://picsum.photos/id/247/300/200",
+  "https://picsum.photos/id/248/300/200",
+  "https://picsum.photos/id/249/300/200"
+  ]
+%}
 
-    const embla = EmblaCarousel(viewportNode);
-
-    prevButtonNode.addEventListener("click", embla.scrollPrev, false);
-    nextButtonNode.addEventListener("click", embla.scrollNext, false);
-
-    const mainView = document.getElementById("mainView");
-    const imageView = document.getElementById("imageView");
-    const navbar = document.getElementById("navbar");
-
-    let lastIndex = 0;
-
-    embla.on("select", () => {
-      lastIndex = embla.selectedScrollSnap();
-      addCrossPageTransitions();
-    });
-
-    async function animateIfPossible(callback) {
-      if (document.startViewTransition) {
-        let transition = document.startViewTransition(await callback);
-        return transition.finished;
-      } else {
-        await callback();
-      }
-    }
-
-    async function viewImage(element) {
-      document
-        .querySelector('meta[name="viewport"]')
-        .setAttribute(
-          "content",
-          "width=device-width, initial-scale=1, user-scalable=yes",
-        );
-      history.pushState({}, "", "");
-      removeCrossPageTransitions();
-      const ogImage = element.querySelector("img");
-      ogImage.style.setProperty("view-transition-name", "imageView");
-      animateIfPossible(async () => {
-        const imageViewImage = document.getElementById("imageViewImage");
-        navbar.hidden = true;
-        imageViewImage.src = ogImage.src;
-        await imageViewImage.decode();
-        mainView.hidden = true;
-        imageView.hidden = false;
-        adjustImageViewSize();
-      });
-    }
-
-    window.addEventListener("popstate", () => {
-      closeImageView();
-    });
-
-    window.addEventListener("resize", () => {
-      if (!imageView.hidden) {
-        adjustImageViewSize();
-      }
-    });
-
-    function adjustImageViewSize() {
-      const imageViewImage = document.getElementById("imageViewImage");
-      const imgRatio =
-        imageViewImage.naturalWidth / imageViewImage.naturalHeight;
-      if (imageView.clientWidth / imageView.clientHeight > imgRatio) {
-        imageViewImage.classList.remove("w-full");
-        imageViewImage.classList.remove("h-auto");
-        imageViewImage.classList.add("h-full");
-        imageViewImage.classList.add("w-auto");
-      } else {
-        imageViewImage.classList.remove("h-full");
-        imageViewImage.classList.remove("w-auto");
-        imageViewImage.classList.add("w-full");
-        imageViewImage.classList.add("h-auto");
-      }
-    }
-
-    function closeImageView() {
-      document
-        .querySelector('meta[name="viewport"]')
-        .setAttribute(
-          "content",
-          "width=device-width, initial-scale=1, user-scalable=no",
-        );
-      animateIfPossible(() => {
-        navbar.hidden = false;
-        mainView.hidden = false;
-        imageView.hidden = true;
-        embla.reInit({
-          startIndex: lastIndex,
-        });
-      }).then(() => {
-        const emblaSlidesImgs = document.querySelectorAll(".embla__slide img");
-        emblaSlidesImgs.forEach((img) => {
-          img.style.removeProperty("view-transition-name");
-        });
-        addCrossPageTransitions();
-      });
-    }
-
-    function removeCrossPageTransitions() {
-      const elements = document.querySelectorAll("[crosspagetransition]");
-      elements.forEach((element) => {
-        element.style.removeProperty("view-transition-name");
-      });
-    }
-
-    function addCrossPageTransitions() {
-      const elements = document.querySelectorAll("[crosspagetransition]");
-      elements.forEach((element) => {
-        element.style.removeProperty("view-transition-name");
-        const name = element.getAttribute("crosspagetransition");
-        element.style.setProperty("view-transition-name", name);
-      });
-      if (lastIndex !== 0) {
-        document
-          .querySelectorAll(".embla__slide img")[0]
-          .style.removeProperty("view-transition-name");
-      } else {
-        document
-          .querySelectorAll(".embla__slide img")[0]
-          .style.setProperty("view-transition-name", "{{ 'img-' + page }}");
-      }
-    }
-  </script>
+{% block description %}
+  <p>
+    Una plataforma donde las personas se comunican a través de dibujos en lugar
+    de palabras.
+  </p>
+  <p>
+    La premisa es simple: Cáda post puede contener un dibujo, y el mismo puede
+    ser respondido con otro dibujo. De esta manera, se crean hilos visuales de
+    conversación entre los usuarios.
+  </p>
+  <p>
+    Cada pieza de arte es creada dentro del lienzo de dibujo del sitio,
+    asegurando que todo el contenido sea autentico. De esta manera, no existen
+    problemas de plagio ni calcado ni re-uploads ni trampas similares.
+  </p>
 {% endblock %}
+
+{% block features %}
+  <li>Autenticación con Google OAuth</li>
+  <li>Pago de membresía con Paypal</li>
+  <li>Envío de emails de confirmación automáticos</li>
+  <li>Sistema de moderación con reportes y baneos</li>
+{% endblock %}
+
+{% block technologies %}
+  {{ techpill( "JavaScript", url_for('static', filename='resources/JS ICON.svg'), "JavaScript icon" ) }}
+  {{ techpill( "Python", url_for('static', filename='resources/PYTHON ICON.svg'), "Python icon" ) }}
+  {{ techpill( "HTMX", url_for('static', filename='resources/HTMX ICON.svg'), "HTMX icon" ) }}
+  {{ techpill( "MySQL", url_for('static', filename='resources/MYSQL ICON.svg'), "MySQL icon" ) }}
+  {{ techpill( "Adobe Illustrator", url_for('static', filename='resources/ADOBE ILLUSTRATOR ICON.svg'), "Adobe Illustrator icon" ) }}
+  {{ techpill( "Adobe After Effects", url_for('static', filename='resources/ADOBE AFTER EFFECTS ICON.svg'), "Adobe After Effects icon" ) }}
+  <!-- Lottie -->
+  <!-- Cloudflare -->
+  <!-- Git -->
+  <!-- Nginx -->
+  <!-- GSAP -->
+  <!-- Tailwind CSS -->
+{% endblock %}
+
+{% set source_url = null %}
+{% set production_url = "https://drabeh.com" %}
