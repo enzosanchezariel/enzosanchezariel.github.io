@@ -16,6 +16,7 @@
               <img
                 src="https://picsum.photos/id/247/300/200"
                 style="view-transition-name: {{ 'img-' + page }};"
+                crosspagetransition="{{ 'img-' + page }}"
                 class="aspect-3/2 h-auto w-full max-w-120 bg-gray-200 lg:max-w-170"
               />
             </button>
@@ -73,6 +74,7 @@
       <div class="p-4 lg:p-6">
         <h1
           style="view-transition-name: {{ 'title-' + page }};"
+          crosspagetransition="{{ 'title-' + page }}"
           class="w-min pb-6 text-3xl text-emerald-600"
         >
           DraBeh
@@ -199,13 +201,13 @@
   >
     <img
       id="imageViewImage"
+      style="view-transition-name: imageView;"
       src=""
       alt=""
-      style="view-transition-name: {{ 'img-' + page }};"
       class="h-auto w-full"
     />
     <button
-      onclick="closeImageView()"
+      onclick="history.back()"
       class="absolute top-6 right-2 z-10 flex -translate-y-1/2 cursor-pointer rounded-sm bg-[#ffffff]/50 p-1 text-[#000000]/25 transition hover:bg-gray-200 hover:text-gray-400 active:scale-90 active:bg-gray-200 active:text-gray-400"
     >
       <svg
@@ -249,22 +251,56 @@
 
     async function animateIfPossible(callback) {
       if (document.startViewTransition) {
-        document.startViewTransition(await callback);
+        let transition = document.startViewTransition(await callback);
+        return transition.finished;
       } else {
-        callback();
+        await callback();
       }
     }
 
     async function viewImage(element) {
+      history.pushState({}, "", "");
+      removeCrossPageTransitions();
+      const ogImage = element.querySelector("img");
+      ogImage.style.setProperty("view-transition-name", "imageView");
       animateIfPossible(async () => {
         const imageViewImage = document.getElementById("imageViewImage");
         navbar.hidden = true;
-        imageViewImage.src = element.querySelector("img").src;
+        imageViewImage.src = ogImage.src;
         await imageViewImage.decode();
         mainView.hidden = true;
         imageView.hidden = false;
+        adjustImageViewSize();
       });
     }
+
+    window.addEventListener("popstate", () => {
+      closeImageView();
+    });
+
+    window.addEventListener("resize", () => {
+      if (!imageView.hidden) {
+        adjustImageViewSize();
+      }
+    });
+
+    function adjustImageViewSize() {
+      const imageViewImage = document.getElementById("imageViewImage");
+      const imgRatio =
+        imageViewImage.naturalWidth / imageViewImage.naturalHeight;
+      if (imageView.clientWidth / imageView.clientHeight > imgRatio) {
+        imageViewImage.classList.remove("w-full");
+        imageViewImage.classList.remove("h-auto");
+        imageViewImage.classList.add("h-full");
+        imageViewImage.classList.add("w-auto");
+      } else {
+        imageViewImage.classList.remove("h-full");
+        imageViewImage.classList.remove("w-auto");
+        imageViewImage.classList.add("w-full");
+        imageViewImage.classList.add("h-auto");
+      }
+    }
+
     function closeImageView() {
       animateIfPossible(() => {
         navbar.hidden = false;
@@ -273,6 +309,28 @@
         embla.reInit({
           startIndex: lastIndex,
         });
+      }).then(() => {
+        const emblaSlidesImgs = document.querySelectorAll(".embla__slide img");
+        emblaSlidesImgs.forEach((img) => {
+          img.style.removeProperty("view-transition-name");
+        });
+        addCrossPageTransitions();
+      });
+    }
+
+    function removeCrossPageTransitions() {
+      const elements = document.querySelectorAll("[crosspagetransition]");
+      elements.forEach((element) => {
+        element.style.removeProperty("view-transition-name");
+      });
+    }
+
+    function addCrossPageTransitions() {
+      const elements = document.querySelectorAll("[crosspagetransition]");
+      elements.forEach((element) => {
+        element.style.removeProperty("view-transition-name");
+        const name = element.getAttribute("crosspagetransition");
+        element.style.setProperty("view-transition-name", name);
       });
     }
   </script>
