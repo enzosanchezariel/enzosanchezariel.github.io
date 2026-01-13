@@ -247,6 +247,7 @@
 
     embla.on("select", () => {
       lastIndex = embla.selectedScrollSnap();
+      addCrossPageTransitions();
     });
 
     async function animateIfPossible(callback) {
@@ -344,6 +345,15 @@
         const name = element.getAttribute("crosspagetransition");
         element.style.setProperty("view-transition-name", name);
       });
+      if (lastIndex !== 0) {
+        document
+          .querySelectorAll(".embla__slide img")[0]
+          .style.removeProperty("view-transition-name");
+      } else {
+        document
+          .querySelectorAll(".embla__slide img")[0]
+          .style.setProperty("view-transition-name", "{{ 'img-' + page }}");
+      }
     }
   </script>
 {% endblock %}

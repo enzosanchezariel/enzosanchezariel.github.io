@@ -19,6 +19,11 @@
       @view-transition {
         navigation: auto; /**/
       }
+
+      ::view-transition-new(navbar) {
+        z-index: 10;
+        animation: none;
+      }
     </style>
   </head>
   <body
@@ -26,6 +31,7 @@
   >
     <nav
       id="navbar"
+      style="view-transition-name: navbar;"
       class="sticky top-0 z-999 flex justify-center border-b-1 border-slate-200 bg-white"
     >
       <div
