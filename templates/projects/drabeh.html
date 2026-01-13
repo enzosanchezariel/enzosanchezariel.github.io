@@ -259,6 +259,12 @@
     }
 
     async function viewImage(element) {
+      document
+        .querySelector('meta[name="viewport"]')
+        .setAttribute(
+          "content",
+          "width=device-width, initial-scale=1, user-scalable=yes",
+        );
       history.pushState({}, "", "");
       removeCrossPageTransitions();
       const ogImage = element.querySelector("img");
@@ -302,6 +308,12 @@
     }
 
     function closeImageView() {
+      document
+        .querySelector('meta[name="viewport"]')
+        .setAttribute(
+          "content",
+          "width=device-width, initial-scale=1, user-scalable=no",
+        );
       animateIfPossible(() => {
         navbar.hidden = false;
         mainView.hidden = false;
