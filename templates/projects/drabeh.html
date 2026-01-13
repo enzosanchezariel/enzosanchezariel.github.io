@@ -15,19 +15,20 @@
             <button class="embla__slide" onclick="viewImage(this)">
               <img
                 src="https://picsum.photos/id/247/300/200"
-                class="h-auto w-full max-w-120 lg:max-w-170"
+                style="view-transition-name: {{ 'img-' + page }};"
+                class="aspect-3/2 h-auto w-full max-w-120 bg-gray-200 lg:max-w-170"
               />
             </button>
             <button class="embla__slide" onclick="viewImage(this)">
               <img
                 src="https://picsum.photos/id/477/300/200"
-                class="h-auto w-full max-w-120 lg:max-w-170"
+                class="aspect-3/2 h-auto w-full max-w-120 bg-gray-200 lg:max-w-170"
               />
             </button>
             <button class="embla__slide" onclick="viewImage(this)">
               <img
                 src="https://picsum.photos/id/149/300/200"
-                class="h-auto w-full max-w-120 lg:max-w-170"
+                class="aspect-3/2 h-auto w-full max-w-120 bg-gray-200 lg:max-w-170"
               />
             </button>
           </div>
@@ -70,7 +71,12 @@
         </div>
       </div>
       <div class="p-4 lg:p-6">
-        <h1 class="pb-6 text-3xl text-emerald-600">DraBeh</h1>
+        <h1
+          style="view-transition-name: {{ 'title-' + page }};"
+          class="w-min pb-6 text-3xl text-emerald-600"
+        >
+          DraBeh
+        </h1>
         <div class="grid gap-4 lg:grid-cols-2">
           <article
             class="rounded-sm border-gray-200 text-gray-800 lg:border-1 lg:p-6 [&>p]:mb-2"
@@ -195,7 +201,8 @@
       id="imageViewImage"
       src=""
       alt=""
-      class="h-full w-full object-contain"
+      style="view-transition-name: {{ 'img-' + page }};"
+      class="h-auto w-full"
     />
     <button
       onclick="closeImageView()"
@@ -240,20 +247,32 @@
       lastIndex = embla.selectedScrollSnap();
     });
 
+    async function animateIfPossible(callback) {
+      if (document.startViewTransition) {
+        document.startViewTransition(await callback);
+      } else {
+        callback();
+      }
+    }
+
     async function viewImage(element) {
-      const imageViewImage = document.getElementById("imageViewImage");
-      imageViewImage.src = element.querySelector("img").src;
-      await imageViewImage.decode();
-      navbar.hidden = true;
-      mainView.hidden = true;
-      imageView.hidden = false;
+      animateIfPossible(async () => {
+        const imageViewImage = document.getElementById("imageViewImage");
+        navbar.hidden = true;
+        imageViewImage.src = element.querySelector("img").src;
+        await imageViewImage.decode();
+        mainView.hidden = true;
+        imageView.hidden = false;
+      });
     }
     function closeImageView() {
-      navbar.hidden = false;
-      mainView.hidden = false;
-      imageView.hidden = true;
-      embla.reInit({
-        startIndex: lastIndex,
+      animateIfPossible(() => {
+        navbar.hidden = false;
+        mainView.hidden = false;
+        imageView.hidden = true;
+        embla.reInit({
+          startIndex: lastIndex,
+        });
       });
     }
   </script>

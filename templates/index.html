@@ -191,12 +191,16 @@
               >
                 <article class="flex w-full flex-col">
                   <img
-                    class="h-auto w-full border-slate-200"
+                    class="aspect-3/2 h-auto w-full border-slate-200"
                     src="https://picsum.photos/300/200"
+                    style="view-transition-name: {{ 'img-' + project.dir }};"
                     alt=""
                   />
                   <div class="p-4">
-                    <h1 class="truncate text-left text-xl">
+                    <h1
+                      class="w-min truncate text-left text-xl"
+                      style="view-transition-name: {{ 'title-' + project.dir }};"
+                    >
                       {{ project.name }}
                     </h1>
                   </div>

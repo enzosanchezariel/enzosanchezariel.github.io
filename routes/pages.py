@@ -12,6 +12,6 @@ def landing_page():
 @pages_bp.route("/projects/<path:page>")
 def projects(page):
     try:
-        return render_template(f"projects/{page}.html")
+        return render_template(f"projects/{page}.html", page=page)
     except Exception:
         abort(404)
