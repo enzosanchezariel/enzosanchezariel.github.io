@@ -14,42 +14,34 @@
 
 {% block description %}
   <p>
-    Una plataforma donde las personas se comunican a través de dibujos en lugar
-    de palabras.
+    Sitio web que permite a los estudiantes seleccionar las materias que desean
+    cursar y visualizar el calendario resultante, notificando posibles
+    solapamientos.
   </p>
   <p>
-    La premisa es simple: Cáda post puede contener un dibujo, y el mismo puede
-    ser respondido con otro dibujo. De esta manera, se crean hilos visuales de
-    conversación entre los usuarios.
+    Surge como solución a una problemática real ante la falta de una herramienta
+    similar en la Universidad Tecnológica Nacional de Rosario.
   </p>
   <p>
-    Cada pieza de arte es creada dentro del lienzo de dibujo del sitio,
-    asegurando que todo el contenido sea autentico. De esta manera, no existen
-    problemas de plagio ni calcado ni re-uploads ni trampas similares.
+    La plataforma está precargada con materias de la facultad y permite a los
+    usuarios agregar nuevas asignaturas localmente.
   </p>
 {% endblock %}
 
 {% block features %}
-  <li>Autenticación con Google OAuth</li>
-  <li>Pago de membresía con Paypal</li>
-  <li>Envío de emails de confirmación automáticos</li>
-  <li>Sistema de moderación con reportes y baneos</li>
+  <li>
+    Cálculo de todas las posibles combinaciones de comisiones de las materias
+    seleccionadas.
+  </li>
+  <li>Envío de solicitudes por email para la inclusión de nuevas materias.</li>
 {% endblock %}
 
 {% block technologies %}
+  {{ techpill( "Svelte", url_for('static', filename='resources/SVELTE ICON.svg'), "Svelte icon" ) }}
   {{ techpill( "JavaScript", url_for('static', filename='resources/JS ICON.svg'), "JavaScript icon" ) }}
-  {{ techpill( "Python", url_for('static', filename='resources/PYTHON ICON.svg'), "Python icon" ) }}
-  {{ techpill( "HTMX", url_for('static', filename='resources/HTMX ICON.svg'), "HTMX icon" ) }}
-  {{ techpill( "MySQL", url_for('static', filename='resources/MYSQL ICON.svg'), "MySQL icon" ) }}
-  {{ techpill( "Adobe Illustrator", url_for('static', filename='resources/ADOBE ILLUSTRATOR ICON.svg'), "Adobe Illustrator icon" ) }}
-  {{ techpill( "Adobe After Effects", url_for('static', filename='resources/ADOBE AFTER EFFECTS ICON.svg'), "Adobe After Effects icon" ) }}
-  <!-- Lottie -->
-  <!-- Cloudflare -->
-  <!-- Git -->
-  <!-- Nginx -->
-  <!-- GSAP -->
-  <!-- Tailwind CSS -->
+  <!-- TypeScript -->
+  <!-- PicoCSS -->
 {% endblock %}
 
-{% set source_url = null %}
-{% set production_url = "https://drabeh.com" %}
+{% set source_url = "https://github.com/enzosanchezariel/PlanificadorHorariosUTNFRRO" %}
+{% set production_url = "https://enzosanchezariel.github.io/PlanificadorHorariosUTNFRRO/" %}

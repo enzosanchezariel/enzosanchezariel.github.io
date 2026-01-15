@@ -14,42 +14,39 @@
 
 {% block description %}
   <p>
-    Una plataforma donde las personas se comunican a través de dibujos en lugar
-    de palabras.
+    Aplicación web para gestionar y monitorear portafolios de inversiones en
+    futuros argentinos.
   </p>
   <p>
-    La premisa es simple: Cáda post puede contener un dibujo, y el mismo puede
-    ser respondido con otro dibujo. De esta manera, se crean hilos visuales de
-    conversación entre los usuarios.
+    Permite registrar y consultar la composición del portafolio en cualquier
+    momento, con métricas de rendimiento actualizadas.
   </p>
+
   <p>
-    Cada pieza de arte es creada dentro del lienzo de dibujo del sitio,
-    asegurando que todo el contenido sea autentico. De esta manera, no existen
-    problemas de plagio ni calcado ni re-uploads ni trampas similares.
+    Incluye un sistema de alertas personalizables que el usuario configura según
+    sus propios criterios, recibiendo notificaciones ante variaciones en los
+    precios o en el valor total del portafolio.
   </p>
 {% endblock %}
 
 {% block features %}
-  <li>Autenticación con Google OAuth</li>
-  <li>Pago de membresía con Paypal</li>
-  <li>Envío de emails de confirmación automáticos</li>
-  <li>Sistema de moderación con reportes y baneos</li>
+  <li>Datos reales obtenidos de la API de ReMarkets con PyRofex.</li>
+  <li>Envío de emails de alertas automáticos.</li>
 {% endblock %}
+
+{% set members = 3 %}
 
 {% block technologies %}
-  {{ techpill( "JavaScript", url_for('static', filename='resources/JS ICON.svg'), "JavaScript icon" ) }}
   {{ techpill( "Python", url_for('static', filename='resources/PYTHON ICON.svg'), "Python icon" ) }}
+  {{ techpill( "Flask", url_for('static', filename='resources/FLASK ICON.svg'), "Flask icon" ) }}
+  {{ techpill( "JavaScript", url_for('static', filename='resources/JS ICON.svg'), "JavaScript icon" ) }}
   {{ techpill( "HTMX", url_for('static', filename='resources/HTMX ICON.svg'), "HTMX icon" ) }}
   {{ techpill( "MySQL", url_for('static', filename='resources/MYSQL ICON.svg'), "MySQL icon" ) }}
-  {{ techpill( "Adobe Illustrator", url_for('static', filename='resources/ADOBE ILLUSTRATOR ICON.svg'), "Adobe Illustrator icon" ) }}
-  {{ techpill( "Adobe After Effects", url_for('static', filename='resources/ADOBE AFTER EFFECTS ICON.svg'), "Adobe After Effects icon" ) }}
   <!-- Lottie -->
-  <!-- Cloudflare -->
+  <!-- Tailwind CSS -->
   <!-- Git -->
   <!-- Nginx -->
-  <!-- GSAP -->
-  <!-- Tailwind CSS -->
 {% endblock %}
 
-{% set source_url = null %}
-{% set production_url = "https://drabeh.com" %}
+{% set source_url = "https://github.com/enzosanchezariel/frro-python-2025-1" %}
+{% set production_url = null %}

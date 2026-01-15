@@ -1,0 +1,38 @@
+{% extends "projects/project-base.html" %}
+
+{% set title = "WebQuizApp" %}
+
+{%
+  set images = [
+  ]
+%}
+
+{% block description %}
+  <p>
+    Sitio web que permite a los usuarios crear y unirse a salas con diversos
+    cuestionarios y competir entre miembros de la misma sala.
+  </p>
+{% endblock %}
+
+{% block features %}
+  <li>
+    Niveles de acceso de usuarios (Administrador, Creador de sala y
+    Participante).
+  </li>
+  <li>Envío de resultados de cuestionarios por email.</li>
+  <li>Sistema de puntajes, rangos y desafíos.</li>
+{% endblock %}
+
+{% set members = 4 %}
+
+{% block technologies %}
+  {{ techpill( "Java", url_for('static', filename='resources/JAVA ICON.svg'), "Java icon" ) }}
+  {{ techpill( "JavaScript", url_for('static', filename='resources/JS ICON.svg'), "JavaScript icon" ) }}
+  {{ techpill( "MySQL", url_for('static', filename='resources/MYSQL ICON.svg'), "MySQL icon" ) }}
+  <!-- PicoCSS -->
+  <!-- Git -->
+  <!-- Docker -->
+{% endblock %}
+
+{% set source_url = "https://github.com/enzosanchezariel/TpJava" %}
+{% set production_url = null %}

@@ -95,6 +95,12 @@
             </ul>
           </article>
         </div>
+        {% if members %}
+          <article class="mt-4 text-gray-800 [&>p]:mb-2">
+            <h1 class="mb-3 text-lg font-semibold text-emerald-600">Equipo</h1>
+            <p>Trabajo realizado en equipo de {{ members }} integrantes.</p>
+          </article>
+        {% endif %}
         <article class="mt-4 text-gray-800 [&>p]:mb-2">
           <h1 class="mb-3 text-lg font-semibold text-emerald-600">
             Tecnologías

@@ -21,35 +21,34 @@
   <p>
     La premisa es simple: Cáda post puede contener un dibujo, y el mismo puede
     ser respondido con otro dibujo. De esta manera, se crean hilos visuales de
-    conversación entre los usuarios.
+    conversación entre usuarios.
   </p>
   <p>
     Cada pieza de arte es creada dentro del lienzo de dibujo del sitio,
-    asegurando que todo el contenido sea autentico. De esta manera, no existen
-    problemas de plagio ni calcado ni re-uploads ni trampas similares.
+    asegurando que todo el contenido sea autentico.
   </p>
 {% endblock %}
 
 {% block features %}
-  <li>Autenticación con Google OAuth</li>
-  <li>Pago de membresía con Paypal</li>
-  <li>Envío de emails de confirmación automáticos</li>
-  <li>Sistema de moderación con reportes y baneos</li>
+  <li>Autenticación con Google OAuth.</li>
+  <li>Pago de membresía con PayPal.</li>
+  <li>Envío de emails de confirmación automáticos.</li>
+  <li>Sistema de moderación con reportes y baneos.</li>
 {% endblock %}
 
 {% block technologies %}
-  {{ techpill( "JavaScript", url_for('static', filename='resources/JS ICON.svg'), "JavaScript icon" ) }}
   {{ techpill( "Python", url_for('static', filename='resources/PYTHON ICON.svg'), "Python icon" ) }}
+  {{ techpill( "Flask", url_for('static', filename='resources/FLASK ICON.svg'), "Flask icon" ) }}
+  {{ techpill( "JavaScript", url_for('static', filename='resources/JS ICON.svg'), "JavaScript icon" ) }}
   {{ techpill( "HTMX", url_for('static', filename='resources/HTMX ICON.svg'), "HTMX icon" ) }}
   {{ techpill( "MySQL", url_for('static', filename='resources/MYSQL ICON.svg'), "MySQL icon" ) }}
   {{ techpill( "Adobe Illustrator", url_for('static', filename='resources/ADOBE ILLUSTRATOR ICON.svg'), "Adobe Illustrator icon" ) }}
   {{ techpill( "Adobe After Effects", url_for('static', filename='resources/ADOBE AFTER EFFECTS ICON.svg'), "Adobe After Effects icon" ) }}
+  <!-- Tailwind CSS -->
   <!-- Lottie -->
-  <!-- Cloudflare -->
-  <!-- Git -->
   <!-- Nginx -->
   <!-- GSAP -->
-  <!-- Tailwind CSS -->
+  <!-- Git -->
 {% endblock %}
 
 {% set source_url = null %}

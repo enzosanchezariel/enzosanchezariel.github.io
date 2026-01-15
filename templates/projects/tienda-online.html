@@ -1,0 +1,40 @@
+{% extends "projects/project-base.html" %}
+
+{% set title = "Tienda Online" %}
+
+{%
+  set images = [
+  ]
+%}
+
+{% block description %}
+  <p>
+    Tienda online con gestión de inventarios, pedidos, administración de
+    catálogos, promociones, proveedores, empleados y clientes.
+  </p>
+{% endblock %}
+
+{% block features %}
+  <li>Historico de precios de productos.</li>
+  <li>Carrito de compras.</li>
+  <li>Panel de administrador.</li>
+  <li>Seguimiento de deliveries.</li>
+{% endblock %}
+
+{% set members = 3 %}
+
+{% block technologies %}
+  <!-- TypeScript -->
+  {{ techpill( "JavaScript", url_for('static', filename='resources/JS ICON.svg'), "JavaScript icon" ) }}
+  {{ techpill( "Express", url_for('static', filename='resources/EXPRESS ICON.svg'), "Express icon" ) }}
+  <!-- NodeJS -->
+  <!-- Angular -->
+  <!-- MikroORM -->
+  {{ techpill( "MySQL", url_for('static', filename='resources/MYSQL ICON.svg'), "MySQL icon" ) }}
+  <!-- Cypress -->
+  <!-- PicoCSS -->
+  <!-- Git -->
+{% endblock %}
+
+{% set source_url = "https://github.com/enzosanchezariel/TpDsw/blob/main/proposal.md" %}
+{% set production_url = null %}
