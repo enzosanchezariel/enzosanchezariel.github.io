@@ -5,9 +5,7 @@
     <div
       class="w-full flex-1 border-slate-200 bg-white xl:max-w-6xl xl:border-x-1"
     >
-      <div
-        class="embla overflow-hidden border-b-1 border-slate-200 bg-[#fbfbfb]"
-      >
+      <div class="embla overflow-hidden border-b-1 border-slate-200 bg-black">
         <div class="embla__viewport relative">
           <div
             class="embla__container flex [&>.embla\_\_slide]:flex [&>.embla\_\_slide]:min-w-0 [&>.embla\_\_slide]:shrink-0 [&>.embla\_\_slide]:grow-0 [&>.embla\_\_slide]:basis-full [&>.embla\_\_slide]:justify-center"
@@ -27,7 +25,7 @@
           </div>
           {% if images|length > 1 %}
             <button
-              class="embla__prev absolute top-1/2 left-2 z-10 flex -translate-y-1/2 cursor-pointer rounded-sm bg-[#ffffff]/50 p-1 text-[#000000]/25 transition hover:bg-gray-200 hover:text-gray-400 active:scale-90 active:bg-gray-200 active:text-gray-400"
+              class="embla__prev absolute top-1/2 left-2 z-10 flex -translate-y-1/2 cursor-pointer rounded-sm bg-[#ffffff]/50 p-1 text-[#000000]/50 transition hover:bg-gray-200 hover:text-gray-400 active:scale-90 active:bg-gray-200 active:text-gray-400"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +43,7 @@
               </svg>
             </button>
             <button
-              class="embla__next absolute top-1/2 right-2 z-10 -translate-y-1/2 cursor-pointer rounded-sm bg-[#ffffff]/50 p-1 text-[#000000]/25 transition hover:bg-gray-200 hover:text-gray-400 active:scale-90 active:bg-gray-200 active:text-gray-400"
+              class="embla__next absolute top-1/2 right-2 z-10 -translate-y-1/2 cursor-pointer rounded-sm bg-[#ffffff]/50 p-1 text-[#000000]/50 transition hover:bg-gray-200 hover:text-gray-400 active:scale-90 active:bg-gray-200 active:text-gray-400"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,13 +64,15 @@
         </div>
       </div>
       <div class="p-4 lg:p-6">
-        <h1
-          style="view-transition-name: {{ 'title-' + page }};"
-          crosspagetransition="{{ 'title-' + page }}"
-          class="w-min pb-6 text-3xl text-emerald-600"
-        >
-          DraBeh
-        </h1>
+        <div class="flex">
+          <h1
+            style="view-transition-name: {{ 'title-' + page }};"
+            crosspagetransition="{{ 'title-' + page }}"
+            class="pb-6 text-3xl text-emerald-600"
+          >
+            {{ title }}
+          </h1>
+        </div>
         <div class="grid gap-4 lg:grid-cols-2">
           <article
             class="rounded-sm border-gray-200 text-gray-800 lg:border-1 lg:p-6 [&>p]:mb-2"

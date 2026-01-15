@@ -18,3 +18,8 @@
   transform: translateY(0);
   pointer-events: auto;
 }
+
+img {
+  user-drag: none;
+  -webkit-user-drag: none;
+}

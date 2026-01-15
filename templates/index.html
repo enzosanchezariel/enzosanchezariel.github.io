@@ -168,31 +168,40 @@
               set projects = [
               {
                 'name': 'DraBeh',
-                'dir': 'drabeh'
+                'dir': 'drabeh',
+                'thumbnail': url_for('static', filename='resources/thumbnails/drabeh-1.png')
               },
               {
-                'name': 'Planificador de Horarios UTN',
-                'dir': 'planificador-horarios-utn'
+                'name': 'Cartera de Futuros',
+                'dir': 'cartera-futuros',
+                'thumbnail': url_for('static', filename='resources/thumbnails/cartera-futuros-1.png')
               },
               {
                 'name': 'WebQuizApp',
-                'dir': 'webquizapp'
+                'dir': 'webquizapp',
+                'thumbnail': url_for('static', filename='resources/thumbnails/webquizapp-1.png')
+              },
+              {
+                'name': 'Planificador de Horarios UTN',
+                'dir': 'planificador-horarios-utn',
+                'thumbnail': url_for('static', filename='resources/thumbnails/planificador-horarios-utn-1.png')
               },
               {
                 'name': 'Tienda online',
-                'dir': 'tienda-online'
+                'dir': 'tienda-online',
+                'thumbnail': url_for('static', filename='resources/thumbnails/tienda-online-1.png')
               },
               ]
             %}
             {% for project in projects %}
               <a
                 href="{{ url_for('pages.projects', page=project.dir ) }}"
-                class="flex h-full w-full max-w-[20rem] cursor-pointer overflow-clip rounded-sm outline-1 outline-slate-200 transition hover:scale-105 hover:bg-emerald-200 hover:outline-0 active:scale-90 active:bg-emerald-200 active:outline-0"
+                class="flex h-full w-full max-w-[20rem] cursor-pointer overflow-clip rounded-sm outline-1 outline-slate-200 transition hover:scale-105 hover:bg-emerald-200 hover:shadow-xl/10 hover:outline-0 active:scale-90 active:bg-emerald-200 active:outline-0"
               >
                 <article class="flex w-full flex-col">
                   <img
                     class="aspect-3/2 h-auto w-full border-slate-200"
-                    src="https://picsum.photos/300/200"
+                    src="{{ project.thumbnail }}"
                     style="view-transition-name: {{ 'img-' + project.dir }};"
                     alt=""
                   />
