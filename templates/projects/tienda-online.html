@@ -24,16 +24,15 @@
 {% set members = 3 %}
 
 {% block technologies %}
-  <!-- TypeScript -->
+  {{ techpill( "TypeScript", url_for('static', filename='resources/TS ICON.svg'), "TypeScript icon" ) }}
   {{ techpill( "JavaScript", url_for('static', filename='resources/JS ICON.svg'), "JavaScript icon" ) }}
+  {{ techpill( "Angular", url_for('static', filename='resources/ANGULAR ICON.svg'), "Angular icon" ) }}
   {{ techpill( "Express", url_for('static', filename='resources/EXPRESS ICON.svg'), "Express icon" ) }}
-  <!-- NodeJS -->
-  <!-- Angular -->
-  <!-- MikroORM -->
+  {{ techpill( "NodeJS", url_for('static', filename='resources/NODE ICON.svg'), "NodeJS icon" ) }}
+  {{ techpill( "MikroORM", url_for('static', filename='resources/MIKROORM ICON.svg'), "MikroORM icon" ) }}
   {{ techpill( "MySQL", url_for('static', filename='resources/MYSQL ICON.svg'), "MySQL icon" ) }}
-  <!-- Cypress -->
-  <!-- PicoCSS -->
-  <!-- Git -->
+  {{ techpill( "Cypress", url_for('static', filename='resources/CYPRESS ICON.svg'), "Cypress icon" ) }}
+  {{ techpill( "PicoCSS", url_for('static', filename='resources/PICOCSS ICON.svg'), "PicoCSS icon" ) }}
 {% endblock %}
 
 {% set source_url = "https://github.com/enzosanchezariel/TpDsw/blob/main/proposal.md" %}
