@@ -19,6 +19,21 @@
   pointer-events: auto;
 }
 
+.slidedown {
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+  transition:
+    opacity 150ms ease,
+    transform 150ms ease;
+}
+
+.slidedown.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
 img {
   user-drag: none;
   -webkit-user-drag: none;

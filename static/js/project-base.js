@@ -11,7 +11,6 @@ nextButtonNode.addEventListener("click", embla.scrollNext, false);
 
 const mainView = document.getElementById("mainView");
 const imageView = document.getElementById("imageView");
-const navbar = document.getElementById("navbar");
 
 let lastIndex = 0;
 
@@ -42,7 +41,7 @@ async function viewImage(element) {
   ogImage.style.setProperty("view-transition-name", "imageView");
   animateIfPossible(async () => {
     const imageViewImage = document.getElementById("imageViewImage");
-    navbar.hidden = true;
+    document.getElementById("navbar").hidden = true;
     imageViewImage.src = ogImage.src;
     await imageViewImage.decode();
     mainView.hidden = true;
@@ -85,7 +84,7 @@ function closeImageView() {
       "width=device-width, initial-scale=1, user-scalable=no",
     );
   animateIfPossible(() => {
-    navbar.hidden = false;
+    document.getElementById("navbar").hidden = false;
     mainView.hidden = false;
     imageView.hidden = true;
     embla.reInit({

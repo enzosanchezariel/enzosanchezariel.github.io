@@ -32,7 +32,7 @@
     <nav
       id="navbar"
       style="view-transition-name: navbar;"
-      class="sticky top-0 z-999 flex justify-center border-b-1 border-slate-200 bg-white"
+      class="slidedown show sticky top-0 z-999 flex justify-center border-b-1 border-slate-200 bg-white"
     >
       <div
         class="flex w-full max-w-6xl flex-row items-center justify-center p-2 lg:p-4"
@@ -56,8 +56,10 @@
       </div>
     </nav>
     <script>
+      // NAVBAR LOTTIE ICON
       const iconAnim = document.getElementById("iconAnim");
       const homeBtn = document.getElementById("homeBtn");
+      const navbar = document.getElementById("navbar");
 
       homeBtn.addEventListener("mouseenter", () => {
         iconAnim.stop();
@@ -71,6 +73,25 @@
 
       homeBtn.addEventListener("click", () => {
         window.location.href = "/";
+      });
+
+      // NAVBAR SCROLL
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener("scroll", () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > navbar.offsetHeight) {
+          if (currentScrollY > lastScrollY) {
+            navbar.classList.remove("show");
+          } else if (currentScrollY < lastScrollY) {
+            navbar.classList.add("show");
+          }
+        } else {
+          navbar.classList.add("show");
+        }
+
+        lastScrollY = currentScrollY;
       });
     </script>
     {% block content %}{% endblock %}
