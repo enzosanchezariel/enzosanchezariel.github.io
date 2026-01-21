@@ -24,6 +24,7 @@
         animation: none;
       }
     </style>
+    <script src="{{ url_for('static', filename='js/lottie-player.js') }}"></script>
   </head>
   <body
     class="no-callout relative flex min-h-svh flex-col overflow-x-hidden bg-[#fbfbfb] select-none"
@@ -37,17 +38,41 @@
         class="flex w-full max-w-6xl flex-row items-center justify-center p-2 lg:p-4"
       >
         <div>
-          <a
-            href="{{ url_for('pages.landing_page') }}"
+          <button
+            id="homeBtn"
+            onclick="() => {goto('/')}"
             class="flex cursor-pointer rounded-sm px-3 py-2 font-semibold transition hover:bg-emerald-200 active:scale-90 active:bg-emerald-200"
           >
-            <div class="flex items-center justify-center">
-              <p class="text-xl">&lt;Enzo Sánchez&gt;</p>
-            </div>
-          </a>
+            <lottie-player
+              id="iconAnim"
+              src="{{ url_for('static', filename='resources/lottie/ES.json') }}"
+              class="h-[1.5lh] w-[1.5lh]"
+              background="transparent"
+              speed="1"
+              autoplay="false"
+            ></lottie-player>
+          </button>
         </div>
       </div>
     </nav>
+    <script>
+      const iconAnim = document.getElementById("iconAnim");
+      const homeBtn = document.getElementById("homeBtn");
+
+      homeBtn.addEventListener("mouseenter", () => {
+        iconAnim.stop();
+        iconAnim.play();
+      });
+
+      homeBtn.addEventListener("touchstart", () => {
+        iconAnim.stop();
+        iconAnim.play();
+      });
+
+      homeBtn.addEventListener("click", () => {
+        window.location.href = "/";
+      });
+    </script>
     {% block content %}{% endblock %}
   </body>
 </html>

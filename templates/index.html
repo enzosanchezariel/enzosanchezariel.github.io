@@ -18,11 +18,12 @@
             <span>Desarrollador Full Stack,</span> <span>Animador 2D,</span>
             <span>Diseñador gráfico independiente</span>
           </p>
-          <img
-            src="https://picsum.photos/200"
-            alt=""
+          <lottie-player
+            src="{{ url_for('static', filename='resources/lottie/BANNER.json') }}"
             class="mt-4 block w-full max-w-[20rem] self-center sm:hidden sm:h-full sm:w-auto sm:max-w-full sm:self-auto sm:object-contain lg:mt-6"
-          />
+            loop
+            autoplay
+          ></lottie-player>
           <div
             class="mt-4 flex flex-wrap gap-2 self-center sm:self-auto lg:mt-6"
           >
@@ -91,11 +92,12 @@
           </div>
         </div>
         <div class="hidden flex-1 items-center justify-center sm:flex">
-          <img
-            src="https://picsum.photos/200"
-            alt=""
+          <lottie-player
+            src="{{ url_for('static', filename='resources/lottie/BANNER.json') }}"
             class="w-full sm:h-full sm:w-auto sm:object-contain"
-          />
+            loop
+            autoplay
+          ></lottie-player>
         </div>
       </div>
     </div>
