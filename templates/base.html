@@ -27,21 +27,21 @@
     <script src="{{ url_for('static', filename='js/lottie-player.js') }}"></script>
   </head>
   <body
-    class="no-callout relative flex min-h-svh flex-col overflow-x-hidden bg-[#fbfbfb] select-none"
+    class="no-callout relative flex min-h-svh flex-col overflow-x-hidden bg-[#fbfbfb] select-none dark:bg-zinc-950"
   >
     <nav
       id="navbar"
       style="view-transition-name: navbar;"
-      class="slidedown show sticky top-0 z-999 flex justify-center border-b-1 border-slate-200 bg-white"
+      class="slidedown show sticky top-0 z-999 flex justify-center border-b-1 border-slate-200 bg-white dark:border-zinc-700 dark:bg-zinc-900"
     >
       <div
         class="flex w-full max-w-6xl flex-row items-center justify-center p-2 lg:p-4"
       >
         <div>
-          <button
+          <a
             id="homeBtn"
-            onclick="() => {goto('/')}"
-            class="flex cursor-pointer rounded-sm px-3 py-2 font-semibold transition hover:bg-emerald-200 active:scale-90 active:bg-emerald-200"
+            href="{{ url_for('pages.landing_page') }}"
+            class="flex cursor-pointer rounded-sm px-3 py-2 font-semibold transition hover:bg-emerald-200 active:scale-90 active:bg-emerald-200 dark:text-white dark:hover:bg-zinc-800 dark:active:bg-zinc-800"
           >
             <lottie-player
               id="iconAnim"
@@ -51,7 +51,7 @@
               speed="1"
               autoplay="false"
             ></lottie-player>
-          </button>
+          </a>
         </div>
       </div>
     </nav>
@@ -69,10 +69,6 @@
       homeBtn.addEventListener("touchstart", () => {
         iconAnim.stop();
         iconAnim.play();
-      });
-
-      homeBtn.addEventListener("click", () => {
-        window.location.href = "/";
       });
 
       // NAVBAR SCROLL

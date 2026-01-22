@@ -2,18 +2,18 @@
 {% extends "base.html" %}
 {% block content %}
   <div
-    class="flex w-full flex-col items-center justify-center border-b-1 border-slate-200 bg-white"
+    class="flex w-full flex-col items-center justify-center border-b-1 border-slate-200 bg-white dark:border-zinc-700 dark:bg-zinc-900"
   >
     <div class="flex w-full flex-col gap-2 p-4 lg:p-6 xl:max-w-6xl">
       <div class="flex flex-col gap-6 sm:flex-row sm:gap-4">
         <div class="flex w-auto max-w-3xl flex-2 flex-col items-start">
-          <p class="w-min min-w-fit text-2xl">¡Hola! Soy...</p>
+          <p class="w-min min-w-fit text-2xl dark:text-white">¡Hola! Soy...</p>
           <h1
             class="w-min min-w-fit pb-3 text-5xl font-bold text-emerald-600 select-text sm:text-6xl sm:whitespace-nowrap"
           >
             Enzo Sánchez
           </h1>
-          <p class="text-2xl font-light text-gray-800">
+          <p class="text-2xl font-light text-gray-800 dark:text-zinc-200">
             <span>Estudiante de Ingeniería en Sistemas de Información,</span>
             <span>Desarrollador Full Stack,</span> <span>Animador 2D,</span>
             <span>Diseñador gráfico independiente</span>
@@ -48,7 +48,7 @@
               </div>
             </a>
             <a
-              class="cursor-pointer rounded-sm px-2 py-2 text-gray-800 transition hover:bg-emerald-200 active:scale-90 active:bg-emerald-200 sm:px-3"
+              class="cursor-pointer rounded-sm px-2 py-2 text-gray-800 transition hover:bg-emerald-200 active:scale-90 active:bg-emerald-200 sm:px-3 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:active:bg-zinc-800"
               href="https://www.linkedin.com/in/enzosanchezariel/"
               target="_blank"
             >
@@ -69,7 +69,7 @@
               </div>
             </a>
             <a
-              class="cursor-pointer rounded-sm px-2 py-2 text-gray-800 transition hover:bg-emerald-200 active:scale-90 active:bg-emerald-200 sm:px-3"
+              class="cursor-pointer rounded-sm px-2 py-2 text-gray-800 transition hover:bg-emerald-200 active:scale-90 active:bg-emerald-200 sm:px-3 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:active:bg-zinc-800"
               href="https://github.com/enzosanchezariel"
               target="_blank"
             >
@@ -104,14 +104,16 @@
   </div>
   <div class="flex min-h-screen w-full flex-col items-center">
     <div
-      class="w-full flex-1 items-center border-slate-200 bg-white xl:max-w-6xl xl:border-x-1"
+      class="w-full flex-1 items-center border-slate-200 bg-white xl:max-w-6xl xl:border-x-1 dark:border-zinc-700 dark:bg-zinc-900"
     >
       <div class="p-4 lg:p-6">
         <h2 class="py-6 text-center text-3xl text-emerald-600">Tecnologías</h2>
         <div
-          class="flex flex-col items-center pb-6 text-gray-800 [&>article]:flex [&>article]:flex-col [&>article]:items-center [&>article]:justify-center"
+          class="flex flex-col items-center pb-6 text-gray-800 dark:text-zinc-200 [&>article]:flex [&>article]:flex-col [&>article]:items-center [&>article]:justify-center"
         >
-          <article class="border-b-1 border-slate-200 pb-6">
+          <article
+            class="border-b-1 border-slate-200 pb-6 dark:border-zinc-700"
+          >
             <h1 class="pb-2">Lenguajes de Programación</h1>
             <ul
               class="flex flex-row flex-wrap items-center justify-center gap-4"
@@ -122,7 +124,9 @@
               {{ techpill( "TypeScript", url_for('static', filename='resources/TS ICON.svg'), "TypeScript icon" ) }}
             </ul>
           </article>
-          <article class="border-b-1 border-slate-200 pb-6">
+          <article
+            class="border-b-1 border-slate-200 pb-6 dark:border-zinc-700"
+          >
             <h1 class="pt-4 pb-2">Desarrollo y Diseño Frontend</h1>
             <ul
               class="flex flex-row flex-wrap items-center justify-center gap-4"
@@ -134,7 +138,9 @@
               {{ techpill( "PicoCSS", url_for('static', filename='resources/PICOCSS ICON.svg'), "PicoCSS icon" ) }}
             </ul>
           </article>
-          <article class="border-b-1 border-slate-200 pb-6">
+          <article
+            class="border-b-1 border-slate-200 pb-6 dark:border-zinc-700"
+          >
             <h1 class="pt-4 pb-2">Desarrollo Backend</h1>
             <ul
               class="flex flex-row flex-wrap items-center justify-center gap-4"
@@ -145,7 +151,9 @@
               {{ techpill( "NodeJS", url_for('static', filename='resources/NODE ICON.svg'), "NodeJS icon" ) }}
             </ul>
           </article>
-          <article class="border-b-1 border-slate-200 pb-6">
+          <article
+            class="border-b-1 border-slate-200 pb-6 dark:border-zinc-700"
+          >
             <h1 class="pt-4 pb-2">Bases de datos y ORMs</h1>
             <ul
               class="flex flex-row flex-wrap items-center justify-center gap-4"
@@ -155,7 +163,9 @@
               {{ techpill( "MikroORM", url_for('static', filename='resources/MIKROORM ICON.svg'), "MikroORM icon" ) }}
             </ul>
           </article>
-          <article>
+          <article
+            class="border-b-1 border-slate-200 pb-6 dark:border-zinc-700"
+          >
             <h1 class="pt-4 pb-2">Diseño gráfico y Animación</h1>
             <ul
               class="flex flex-row flex-wrap items-center justify-center gap-4"
@@ -212,11 +222,11 @@
             {% for project in projects %}
               <a
                 href="{{ url_for('pages.projects', page=project.dir ) }}"
-                class="flex h-full w-full max-w-[20rem] cursor-pointer overflow-clip rounded-sm outline-1 outline-slate-200 transition hover:scale-105 hover:bg-emerald-200 hover:shadow-xl/10 hover:outline-0 active:scale-90 active:bg-emerald-200 active:shadow-none active:outline-0"
+                class="flex h-full w-full max-w-[20rem] cursor-pointer overflow-clip rounded-sm outline-1 outline-slate-200 transition hover:scale-105 hover:bg-emerald-200 hover:shadow-xl/10 hover:outline-0 active:scale-90 active:bg-emerald-200 active:shadow-none active:outline-0 dark:bg-zinc-800 dark:text-white dark:outline-zinc-700 dark:hover:bg-emerald-600 dark:active:bg-emerald-600"
               >
                 <article class="flex w-full flex-col">
                   <img
-                    class="aspect-3/2 h-auto w-full border-slate-200"
+                    class="aspect-3/2 h-auto w-full border-slate-200 dark:border-zinc-700"
                     src="{{ project.thumbnail }}"
                     style="view-transition-name: {{ 'img-' + project.dir }};"
                     alt=""
@@ -240,12 +250,12 @@
             action="{{ url_for('email.email') }}"
             method="post"
             onsubmit="contactFormSubmit(event)"
-            class="w-full max-w-2xl text-gray-800"
+            class="w-full max-w-2xl text-gray-800 dark:text-zinc-200"
           >
             <div class="mb-4 flex flex-col">
               <label class="mb-1" for="contact-name">Nombre y apellido</label>
               <input
-                class="rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-emerald-500 focus:outline-emerald-300"
+                class="rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-emerald-500 focus:outline-emerald-300 dark:bg-zinc-800 dark:outline-zinc-700"
                 type="text"
                 id="contact-name"
                 name="name"
@@ -256,7 +266,7 @@
             <div class="mb-4 flex flex-col">
               <label class="mb-1" for="contact-email">Email</label>
               <input
-                class="rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-emerald-500 focus:outline-emerald-300"
+                class="rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-emerald-500 focus:outline-emerald-300 dark:bg-zinc-800 dark:outline-zinc-700"
                 type="email"
                 id="contact-email"
                 name="email"
@@ -266,7 +276,7 @@
             <div class="mb-4 flex flex-col">
               <label class="mb-1" for="contact-subject">Asunto</label>
               <input
-                class="rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-emerald-500 focus:outline-emerald-300"
+                class="rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-emerald-500 focus:outline-emerald-300 dark:bg-zinc-800 dark:outline-zinc-700"
                 type="text"
                 id="contact-subject"
                 name="subject"
@@ -277,7 +287,7 @@
             <div class="mb-4 flex flex-col">
               <label class="mb-1" for="contact-message">Mensaje</label>
               <textarea
-                class="h-50 resize-none rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-emerald-500 focus:outline-emerald-300"
+                class="h-50 resize-none rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-emerald-500 focus:outline-emerald-300 dark:bg-zinc-800 dark:outline-zinc-700"
                 id="contact-message"
                 name="message"
                 minlength="1"
