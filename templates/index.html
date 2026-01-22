@@ -7,16 +7,16 @@
     <div class="flex w-full flex-col gap-2 p-4 lg:p-6 xl:max-w-6xl">
       <div class="flex flex-col gap-6 sm:flex-row sm:gap-4">
         <div class="flex w-auto max-w-3xl flex-2 flex-col items-start">
-          <p class="w-min min-w-fit text-2xl dark:text-white">¡Hola! Soy...</p>
+          <p class="w-min min-w-fit text-2xl dark:text-white">Hello! I'm...</p>
           <h1
             class="w-min min-w-fit pb-3 text-5xl font-bold text-emerald-600 select-text sm:text-6xl sm:whitespace-nowrap"
           >
             Enzo Sánchez
           </h1>
           <p class="text-2xl font-light text-gray-800 dark:text-zinc-200">
-            <span>Estudiante de Ingeniería en Sistemas de Información,</span>
-            <span>Desarrollador Full Stack,</span> <span>Animador 2D,</span>
-            <span>Diseñador gráfico independiente</span>
+            <span>Systems Engineering student,</span>
+            <span>Full Stack Developer,</span> <span>2D Animator,</span>
+            <span>Independent graphic designer</span>
           </p>
           <lottie-player
             src="{{ url_for('static', filename='resources/lottie/BANNER.json') }}"
@@ -44,7 +44,7 @@
                     d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"
                   />
                 </svg>
-                <p class="whitespace-nowrap">Descargar CV</p>
+                <p class="whitespace-nowrap">Download CV</p>
               </div>
             </a>
             <a
@@ -107,14 +107,14 @@
       class="w-full flex-1 items-center border-slate-200 bg-white xl:max-w-6xl xl:border-x-1 dark:border-zinc-700 dark:bg-zinc-900"
     >
       <div class="p-4 lg:p-6">
-        <h2 class="py-6 text-center text-3xl text-emerald-600">Tecnologías</h2>
+        <h2 class="py-6 text-center text-3xl text-emerald-600">Technologies</h2>
         <div
           class="flex flex-col items-center pb-6 text-gray-800 dark:text-zinc-200 [&>article]:flex [&>article]:flex-col [&>article]:items-center [&>article]:justify-center"
         >
           <article
             class="border-b-1 border-slate-200 pb-6 dark:border-zinc-700"
           >
-            <h1 class="pb-2">Lenguajes de Programación</h1>
+            <h1 class="pb-2">Programming Languages</h1>
             <ul
               class="flex flex-row flex-wrap items-center justify-center gap-4"
             >
@@ -127,7 +127,7 @@
           <article
             class="border-b-1 border-slate-200 pb-6 dark:border-zinc-700"
           >
-            <h1 class="pt-4 pb-2">Desarrollo y Diseño Frontend</h1>
+            <h1 class="pt-4 pb-2">Frontend Development and Design</h1>
             <ul
               class="flex flex-row flex-wrap items-center justify-center gap-4"
             >
@@ -141,7 +141,7 @@
           <article
             class="border-b-1 border-slate-200 pb-6 dark:border-zinc-700"
           >
-            <h1 class="pt-4 pb-2">Desarrollo Backend</h1>
+            <h1 class="pt-4 pb-2">Backend Development</h1>
             <ul
               class="flex flex-row flex-wrap items-center justify-center gap-4"
             >
@@ -154,7 +154,7 @@
           <article
             class="border-b-1 border-slate-200 pb-6 dark:border-zinc-700"
           >
-            <h1 class="pt-4 pb-2">Bases de datos y ORMs</h1>
+            <h1 class="pt-4 pb-2">Databases and ORMs</h1>
             <ul
               class="flex flex-row flex-wrap items-center justify-center gap-4"
             >
@@ -166,7 +166,7 @@
           <article
             class="border-b-1 border-slate-200 pb-6 dark:border-zinc-700"
           >
-            <h1 class="pt-4 pb-2">Diseño gráfico y Animación</h1>
+            <h1 class="pt-4 pb-2">Graphic Design and Animation</h1>
             <ul
               class="flex flex-row flex-wrap items-center justify-center gap-4"
             >
@@ -185,7 +185,7 @@
             </ul>
           </article>
         </div>
-        <h2 class="py-6 text-center text-3xl text-emerald-600">Proyectos</h2>
+        <h2 class="py-6 text-center text-3xl text-emerald-600">Projects</h2>
         <div class="flex justify-center">
           <div
             class="grid w-full grid-cols-1 place-items-center gap-4 sm:max-w-full sm:grid-cols-2 lg:grid-cols-3"
@@ -203,17 +203,17 @@
                 'thumbnail': url_for('static', filename='resources/thumbnails/webquizapp-1.png')
               },
               {
-                'name': 'Cartera de Futuros',
+                'name': 'Futures Portfolio',
                 'dir': 'cartera-futuros',
                 'thumbnail': url_for('static', filename='resources/thumbnails/cartera-futuros-1.png')
               },
               {
-                'name': 'Planificador de Horarios UTN',
+                'name': 'UTN Schedule Planner',
                 'dir': 'planificador-horarios-utn',
                 'thumbnail': url_for('static', filename='resources/thumbnails/planificador-horarios-utn-1.png')
               },
               {
-                'name': 'Tienda online',
+                'name': 'Online Store',
                 'dir': 'tienda-online',
                 'thumbnail': url_for('static', filename='resources/thumbnails/tienda-online-1.png')
               },
@@ -244,7 +244,7 @@
             {% endfor %}
           </div>
         </div>
-        <h2 class="py-6 text-center text-3xl text-emerald-600">Contacto</h2>
+        <h2 class="py-6 text-center text-3xl text-emerald-600">Contact</h2>
         <div class="flex flex-col items-center">
           <form
             action="{{ url_for('email.email') }}"
@@ -253,7 +253,7 @@
             class="w-full max-w-2xl text-gray-800 dark:text-zinc-200"
           >
             <div class="mb-4 flex flex-col">
-              <label class="mb-1" for="contact-name">Nombre y apellido</label>
+              <label class="mb-1" for="contact-name">Name and surname</label>
               <input
                 class="rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-emerald-500 focus:outline-emerald-300 dark:bg-zinc-800 dark:outline-zinc-700"
                 type="text"
@@ -274,7 +274,7 @@
               />
             </div>
             <div class="mb-4 flex flex-col">
-              <label class="mb-1" for="contact-subject">Asunto</label>
+              <label class="mb-1" for="contact-subject">Subject</label>
               <input
                 class="rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-emerald-500 focus:outline-emerald-300 dark:bg-zinc-800 dark:outline-zinc-700"
                 type="text"
@@ -285,7 +285,7 @@
               />
             </div>
             <div class="mb-4 flex flex-col">
-              <label class="mb-1" for="contact-message">Mensaje</label>
+              <label class="mb-1" for="contact-message">Message</label>
               <textarea
                 class="h-50 resize-none rounded-sm px-3 py-2 outline-1 outline-slate-200 transition placeholder:text-emerald-500 focus:outline-emerald-300 dark:bg-zinc-800 dark:outline-zinc-700"
                 id="contact-message"
@@ -317,7 +317,7 @@
                 <path d="M16 22l5 -5" />
                 <path d="M21 21.5v-4.5h-4.5" />
               </svg>
-              <p>Enviar mensaje</p>
+              <p>Send message</p>
             </button>
           </form>
         </div>
@@ -350,7 +350,7 @@
       submitButton.disabled = true;
 
       if (formData.get("message").trim().length === 0) {
-        await showToast("El mensaje no puede estar vacío.", true);
+        await showToast("The message cannot be empty.", true);
         submitButton.disabled = false;
         return;
       }
@@ -363,17 +363,17 @@
       })
         .then(async (response) => {
           if (response.ok) {
-            await showToast("Mensaje enviado con éxito.");
+            await showToast("Message sent successfully.");
 
             form.reset();
           } else {
             submitButton.classList.remove("animate-pulse");
-            await showToast("Error al enviar el mensaje.", true);
+            await showToast("Error while sending the message.", true);
           }
         })
         .catch(async () => {
           submitButton.classList.remove("animate-pulse");
-          await showToast("Error al enviar el mensaje.", true);
+          await showToast("Error while sending the message.", true);
         })
         .finally(() => {
           submitButton.classList.remove("animate-pulse");

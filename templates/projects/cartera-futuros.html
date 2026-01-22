@@ -1,6 +1,6 @@
 {% extends "projects/project-base.html" %}
 
-{% set title = "Cartera de Futuros" %}
+{% set title = "Futures Portfolio" %}
 
 {%
   set images = [
@@ -13,24 +13,21 @@
 %}
 
 {% block description %}
+  <p>Website to manage and monitor Argentine futures investment portfolios.</p>
   <p>
-    Sitio web para gestionar y monitorear portafolios de inversiones en futuros
-    argentinos.
+    It allows users to record and review the portfolio composition at any time,
+    with up-to-date performance metrics.
   </p>
   <p>
-    Permite registrar y consultar la composición del portafolio en cualquier
-    momento, con métricas de rendimiento actualizadas.
-  </p>
-  <p>
-    Incluye un sistema de alertas personalizables que el usuario configura según
-    sus propios criterios, recibiendo notificaciones ante variaciones en los
-    precios o en el valor total del portafolio.
+    It includes a customizable alert system that users configure based on their
+    own criteria, receiving notifications when prices fluctuate or when the
+    total portfolio value changes.
   </p>
 {% endblock %}
 
 {% block features %}
-  <li>Datos reales obtenidos de la API de ReMarkets con PyRofex.</li>
-  <li>Envío de emails de alertas automáticos.</li>
+  <li>Real data obtained from the ReMarkets API using PyRofex.</li>
+  <li>Automatic alert email notifications.</li>
 {% endblock %}
 
 {% set members = 3 %}

@@ -1,6 +1,6 @@
 {% extends "projects/project-base.html" %}
 
-{% set title = "Planificador de Horarios UTN" %}
+{% set title = "UTN Schedule Planner" %}
 
 {%
   set images = [
@@ -14,22 +14,22 @@
 
 {% block description %}
   <p>
-    Sitio web que permite a los estudiantes de la Universidad Tecnológica
-    Nacional de Rosario seleccionar las materias que desean cursar y visualizar
-    el calendario resultante, notificando posibles solapamientos.
+    A website that allows students of the National Technological University of
+    Rosario to select the classes they want to take and view the resulting
+    schedule, notifying them of potential overlaps.
   </p>
   <p>
-    La plataforma está precargada con materias de la facultad y permite a los
-    usuarios agregar nuevas asignaturas localmente.
+    The platform comes preloaded with university classes and allows users to add
+    new ones locally.
   </p>
 {% endblock %}
 
 {% block features %}
   <li>
-    Cálculo de todas las posibles combinaciones de comisiones de las materias
-    seleccionadas.
+    Calculation of all possible combinations of sections for the selected
+    classes.
   </li>
-  <li>Envío de solicitudes por email para la inclusión de nuevas materias.</li>
+  <li>Email submission requests for the inclusion of new classes.</li>
 {% endblock %}
 
 {% block technologies %}
