@@ -15,19 +15,24 @@
 %}
 
 {% block description %}
+  <p>Sitio web de cuestionarios competitivos.</p>
   <p>
-    Sitio web que permite a los usuarios crear y unirse a salas con diversos
-    cuestionarios y competir entre miembros de la misma sala.
+    Cada sala tiene un único administrador que crea cuestionarios de diversos
+    temas, una fecha de finalización y una tabla de puntajes.
+  </p>
+  <p>
+    Al llegar la fecha de finalización de la sala, el o los usuarios con mayor
+    puntaje son declarados ganadores.
+  </p>
+  <p>
+    Cada usuario tiene un rango que aumenta conforme completa desafíos en
+    distintos cuestionarios.
   </p>
 {% endblock %}
 
 {% block features %}
-  <li>
-    Niveles de acceso de usuarios (Administrador, Creador de sala y
-    Participante).
-  </li>
+  <li>Panel de administración del sitio y de cada sala.</li>
   <li>Envío de resultados de cuestionarios por email.</li>
-  <li>Sistema de puntajes, rangos y desafíos.</li>
 {% endblock %}
 
 {% set members = 4 %}
