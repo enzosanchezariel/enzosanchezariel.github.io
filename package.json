@@ -11,7 +11,7 @@
     "f:h": "flask run --host=0.0.0.0",
     "f:s": "flask shell",
     "pb:e": "pybabel extract -F babel.cfg -o messages.pot .",
-    "pb:i": "pybabel init -i messages.pot -d translations -l es",
+    "pb:i": "pybabel init -i messages.pot -d translations -l ${npm_config_lang:-es}",
     "pb:u": "pybabel update -i messages.pot -d translations",
     "pb:c": "pybabel compile -d translations"
   },
