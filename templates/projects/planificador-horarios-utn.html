@@ -1,6 +1,6 @@
 {% extends "projects/project-base.html" %}
 
-{% set title = "UTN Schedule Planner" %}
+{% set title = gettext("UTN Schedule Planner") %}
 
 {%
   set images = [
@@ -14,22 +14,20 @@
 
 {% block description %}
   <p>
-    A website that allows students of the National Technological University of
-    Rosario to select the classes they want to take and view the resulting
-    schedule, notifying them of potential overlaps.
+    {{ gettext("A website that allows students of the National Technological University of Rosario to select the classes they want to take and view the resulting schedule, notifying them of potential overlaps.") }}
   </p>
   <p>
-    The platform comes preloaded with university classes and allows users to add
-    new ones locally.
+    {{ gettext("The platform comes preloaded with university classes and allows users to add new ones locally.") }}
   </p>
 {% endblock %}
 
 {% block features %}
   <li>
-    Calculation of all possible combinations of sections for the selected
-    classes.
+    {{ gettext("Calculation of all possible combinations of sections for the selected classes.") }}
   </li>
-  <li>Email submission requests for the inclusion of new classes.</li>
+  <li>
+    {{ gettext("Email submission requests for the inclusion of new classes.") }}
+  </li>
 {% endblock %}
 
 {% block technologies %}

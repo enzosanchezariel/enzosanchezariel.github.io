@@ -1,0 +1,274 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-01-22 20:38-0300\n"
+"PO-Revision-Date: 2026-01-22 20:40-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: templates/index.html:11
+msgid "Hello! I'm..."
+msgstr "¡Hola! Soy..."
+
+#: templates/index.html:19
+msgid "Systems Engineering student,"
+msgstr "Estudiante de Ingeniería en Sistemas de Información,"
+
+#: templates/index.html:20
+msgid "Full Stack Developer,"
+msgstr "Desarrollador Full Stack,"
+
+#: templates/index.html:21
+msgid "2D Animator,"
+msgstr "Animador 2D,"
+
+#: templates/index.html:22
+msgid "Independent graphic designer"
+msgstr "Diseñador gráfico independiente"
+
+#: templates/index.html:50
+msgid "Download CV"
+msgstr "Descargar CV"
+
+#: templates/index.html:114 templates/projects/project-base.html:113
+msgid "Technologies"
+msgstr "Tecnologías"
+
+#: templates/index.html:122
+msgid "Programming Languages"
+msgstr "Lenguajes de Programación"
+
+#: templates/index.html:136
+msgid "Frontend Development and Design"
+msgstr "Desarrollo y Diseño Frontend"
+
+#: templates/index.html:151
+msgid "Backend Development"
+msgstr "Desarrollo Backend"
+
+#: templates/index.html:164
+msgid "Databases and ORMs"
+msgstr "Bases de datos y ORMs"
+
+#: templates/index.html:177
+msgid "Graphic Design and Animation"
+msgstr "Diseño gráfico y Animación"
+
+#: templates/index.html:189
+msgid "Testing"
+msgstr "Testing"
+
+#: templates/index.html:198
+msgid "Projects"
+msgstr "Proyectos"
+
+#: templates/index.html:217 templates/projects/cartera-futuros.html:3
+msgid "Futures Portfolio"
+msgstr "Cartera de Futuros"
+
+#: templates/index.html:222 templates/projects/planificador-horarios-utn.html:3
+msgid "UTN Schedule Planner"
+msgstr "Planificador de Horarios UTN"
+
+#: templates/index.html:227 templates/projects/tienda-online.html:3
+msgid "Online Store"
+msgstr "Tienda online"
+
+#: templates/index.html:259
+msgid "Contact"
+msgstr "Contacto"
+
+#: templates/index.html:270
+msgid "Name and surname"
+msgstr "Nombre y apellido"
+
+#: templates/index.html:283
+msgid "Email"
+msgstr "Email"
+
+#: templates/index.html:295
+msgid "Subject"
+msgstr "Asunto"
+
+#: templates/index.html:308
+msgid "Message"
+msgstr "Mensaje"
+
+#: templates/index.html:341
+msgid "Send message"
+msgstr "Enviar mensaje"
+
+#: templates/projects/cartera-futuros.html:17
+msgid "Website to manage and monitor Argentine futures investment portfolios."
+msgstr "Sitio web para gestionar y monitorear portafolios de inversiones en futuros argentinos."
+
+#: templates/projects/cartera-futuros.html:20
+msgid ""
+"It allows users to record and review the portfolio composition at any "
+"time, with up-to-date performance metrics."
+msgstr "Permite registrar y consultar la composición del portafolio en cualquier momento, con métricas de rendimiento actualizadas."
+
+#: templates/projects/cartera-futuros.html:23
+msgid ""
+"It includes a customizable alert system that users configure based on "
+"their own criteria, receiving notifications when prices fluctuate or when"
+" the total portfolio value changes."
+msgstr "Incluye un sistema de alertas personalizables que el usuario configura según sus propios criterios, recibiendo notificaciones ante variaciones en los precios o en el valor total del portafolio."
+
+#: templates/projects/cartera-futuros.html:29
+msgid "Real data obtained from the ReMarkets API using PyRofex."
+msgstr "Datos reales obtenidos de la API de ReMarkets con PyRofex."
+
+#: templates/projects/cartera-futuros.html:31
+msgid "Automatic alert email notifications."
+msgstr "Envío de emails de alertas automáticos."
+
+#: templates/projects/drabeh.html:18
+msgid "A platform where people communicate through drawings instead of words."
+msgstr "Una plataforma donde las personas se comunican a través de dibujos en lugar de palabras."
+
+#: templates/projects/drabeh.html:21
+msgid ""
+"Each post can contain a drawing, and it can be replied to with another "
+"drawing. In this way, visual conversation threads are created between "
+"users."
+msgstr "Each post can contain a drawing, and it can be replied to with another drawing. In this way, visual conversation threads are created between users."
+
+#: templates/projects/drabeh.html:24
+msgid ""
+"Each piece of art is created within the site's drawing canvas, ensuring "
+"that all content is original."
+msgstr "Cada pieza de arte es creada dentro del lienzo de dibujo del sitio, asegurando que todo el contenido sea auténtico."
+
+#: templates/projects/drabeh.html:29
+msgid "Authentication via Google OAuth."
+msgstr "Autenticación con Google OAuth."
+
+#: templates/projects/drabeh.html:30
+msgid "Membership payments through PayPal."
+msgstr "Pago de membresía con PayPal."
+
+#: templates/projects/drabeh.html:31
+msgid "Automatic confirmation email delivery."
+msgstr "Envío de emails de confirmación automáticos."
+
+#: templates/projects/drabeh.html:32
+msgid "Moderation system with reports and bans."
+msgstr "Sistema de moderación con reportes y baneos."
+
+#: templates/projects/planificador-horarios-utn.html:17
+msgid ""
+"A website that allows students of the National Technological University "
+"of Rosario to select the classes they want to take and view the resulting"
+" schedule, notifying them of potential overlaps."
+msgstr "Sitio web que permite a los estudiantes de la Universidad Tecnológica Nacional de Rosario seleccionar las materias que desean cursar y visualizar el calendario resultante, notificando posibles solapamientos."
+
+#: templates/projects/planificador-horarios-utn.html:20
+msgid ""
+"The platform comes preloaded with university classes and allows users to "
+"add new ones locally."
+msgstr "La plataforma está precargada con materias de la facultad y permite a los usuarios agregar nuevas asignaturas localmente."
+
+#: templates/projects/planificador-horarios-utn.html:26
+msgid ""
+"Calculation of all possible combinations of sections for the selected "
+"classes."
+msgstr "Cálculo de todas las posibles combinaciones de comisiones de las materias seleccionadas."
+
+#: templates/projects/planificador-horarios-utn.html:29
+msgid "Email submission requests for the inclusion of new classes."
+msgstr "Envío de solicitudes por email para la inclusión de nuevas materias."
+
+#: templates/projects/project-base.html:83
+msgid "Description"
+msgstr "Descripción"
+
+#: templates/projects/project-base.html:92
+msgid "Features"
+msgstr "Características"
+
+#: templates/projects/project-base.html:103
+msgid "Team"
+msgstr "Equipo"
+
+#: templates/projects/project-base.html:106
+msgid "Project developed by a team of"
+msgstr "Trabajo realizado en equipo de"
+
+#: templates/projects/project-base.html:107
+msgid "members."
+msgstr "integrantes."
+
+#: templates/projects/project-base.html:130
+msgid "Source code"
+msgstr "Código fuente"
+
+#: templates/projects/project-base.html:157
+msgid "View live"
+msgstr "Ver en producción"
+
+#: templates/projects/tienda-online.html:15
+msgid ""
+"Online store with inventory management, order processing, and "
+"administration of catalogs, promotions, suppliers, employees, and "
+"customers."
+msgstr "Tienda online con gestión de inventarios, pedidos, administración de catálogos, promociones, proveedores, empleados y clientes."
+
+#: templates/projects/tienda-online.html:20
+msgid "Product price history."
+msgstr "Histórico de precios de productos."
+
+#: templates/projects/tienda-online.html:21
+msgid "Shopping cart."
+msgstr "Carrito de compras."
+
+#: templates/projects/tienda-online.html:22
+msgid "Admin dashboard."
+msgstr "Panel de administrador."
+
+#: templates/projects/tienda-online.html:23
+msgid "Delivery tracking."
+msgstr "Seguimiento de deliveries."
+
+#: templates/projects/webquizapp.html:18
+msgid "Competitive quiz website."
+msgstr "Sitio web de cuestionarios competitivos."
+
+#: templates/projects/webquizapp.html:20
+msgid ""
+"Each room has a single administrator who creates quizzes on various "
+"topics, sets an end date, and manages a scoreboard."
+msgstr "Cada sala tiene un único administrador que crea cuestionarios de diversos temas, una fecha de finalización y una tabla de puntajes."
+
+#: templates/projects/webquizapp.html:23
+msgid ""
+"When the room’s end date is reached, the user or users with the highest "
+"score are declared winners."
+msgstr "Al llegar la fecha de finalización de la sala, el o los usuarios con mayor puntaje son declarados ganadores."
+
+#: templates/projects/webquizapp.html:26
+msgid ""
+"Each user has a rank that increases as they complete challenges across "
+"different quizzes."
+msgstr "Cada usuario tiene un rango que aumenta conforme completa desafíos en distintos cuestionarios."
+
+#: templates/projects/webquizapp.html:31
+msgid "Administration panel for the site and each room."
+msgstr "Panel de administración del sitio y de cada sala."
+
+#: templates/projects/webquizapp.html:32
+msgid "Email delivery of quiz results."
+msgstr "Envío de resultados de cuestionarios por email."
+

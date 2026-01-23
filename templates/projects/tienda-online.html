@@ -1,6 +1,6 @@
 {% extends "projects/project-base.html" %}
 
-{% set title = "Online Store" %}
+{% set title = gettext("Online Store") %}
 
 {%
   set images = [
@@ -12,16 +12,15 @@
 
 {% block description %}
   <p>
-    Online store with inventory management, order processing, and administration
-    of catalogs, promotions, suppliers, employees, and customers.
+    {{ gettext("Online store with inventory management, order processing, and administration of catalogs, promotions, suppliers, employees, and customers.") }}
   </p>
 {% endblock %}
 
 {% block features %}
-  <li>Product price history.</li>
-  <li>Shopping cart.</li>
-  <li>Admin dashboard.</li>
-  <li>Delivery tracking.</li>
+  <li>{{ gettext("Product price history.") }}</li>
+  <li>{{ gettext("Shopping cart.") }}</li>
+  <li>{{ gettext("Admin dashboard.") }}</li>
+  <li>{{ gettext("Delivery tracking.") }}</li>
 {% endblock %}
 
 {% set members = 3 %}

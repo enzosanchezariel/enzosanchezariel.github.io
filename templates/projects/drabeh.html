@@ -14,22 +14,22 @@
 %}
 
 {% block description %}
-  <p>A platform where people communicate through drawings instead of words.</p>
   <p>
-    Each post can contain a drawing, and it can be replied to with another
-    drawing. In this way, visual conversation threads are created between users.
+    {{ gettext("A platform where people communicate through drawings instead of words.") }}
   </p>
   <p>
-    Each piece of art is created within the site's drawing canvas, ensuring that
-    all content is original.
+    {{ gettext("Each post can contain a drawing, and it can be replied to with another drawing. In this way, visual conversation threads are created between users.") }}
+  </p>
+  <p>
+    {{ gettext("Each piece of art is created within the site's drawing canvas, ensuring that all content is original.") }}
   </p>
 {% endblock %}
 
 {% block features %}
-  <li>Authentication via Google OAuth.</li>
-  <li>Membership payments through PayPal.</li>
-  <li>Automatic confirmation email delivery.</li>
-  <li>Moderation system with reports and bans.</li>
+  <li>{{ gettext("Authentication via Google OAuth.") }}</li>
+  <li>{{ gettext("Membership payments through PayPal.") }}</li>
+  <li>{{ gettext("Automatic confirmation email delivery.") }}</li>
+  <li>{{ gettext("Moderation system with reports and bans.") }}</li>
 {% endblock %}
 
 {% block technologies %}

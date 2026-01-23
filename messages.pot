@@ -1,0 +1,273 @@
+# Translations template for PROJECT.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-01-22 20:38-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: templates/index.html:11
+msgid "Hello! I'm..."
+msgstr ""
+
+#: templates/index.html:19
+msgid "Systems Engineering student,"
+msgstr ""
+
+#: templates/index.html:20
+msgid "Full Stack Developer,"
+msgstr ""
+
+#: templates/index.html:21
+msgid "2D Animator,"
+msgstr ""
+
+#: templates/index.html:22
+msgid "Independent graphic designer"
+msgstr ""
+
+#: templates/index.html:50
+msgid "Download CV"
+msgstr ""
+
+#: templates/index.html:114 templates/projects/project-base.html:113
+msgid "Technologies"
+msgstr ""
+
+#: templates/index.html:122
+msgid "Programming Languages"
+msgstr ""
+
+#: templates/index.html:136
+msgid "Frontend Development and Design"
+msgstr ""
+
+#: templates/index.html:151
+msgid "Backend Development"
+msgstr ""
+
+#: templates/index.html:164
+msgid "Databases and ORMs"
+msgstr ""
+
+#: templates/index.html:177
+msgid "Graphic Design and Animation"
+msgstr ""
+
+#: templates/index.html:189
+msgid "Testing"
+msgstr ""
+
+#: templates/index.html:198
+msgid "Projects"
+msgstr ""
+
+#: templates/index.html:217 templates/projects/cartera-futuros.html:3
+msgid "Futures Portfolio"
+msgstr ""
+
+#: templates/index.html:222 templates/projects/planificador-horarios-utn.html:3
+msgid "UTN Schedule Planner"
+msgstr ""
+
+#: templates/index.html:227 templates/projects/tienda-online.html:3
+msgid "Online Store"
+msgstr ""
+
+#: templates/index.html:259
+msgid "Contact"
+msgstr ""
+
+#: templates/index.html:270
+msgid "Name and surname"
+msgstr ""
+
+#: templates/index.html:283
+msgid "Email"
+msgstr ""
+
+#: templates/index.html:295
+msgid "Subject"
+msgstr ""
+
+#: templates/index.html:308
+msgid "Message"
+msgstr ""
+
+#: templates/index.html:341
+msgid "Send message"
+msgstr ""
+
+#: templates/projects/cartera-futuros.html:17
+msgid "Website to manage and monitor Argentine futures investment portfolios."
+msgstr ""
+
+#: templates/projects/cartera-futuros.html:20
+msgid ""
+"It allows users to record and review the portfolio composition at any "
+"time, with up-to-date performance metrics."
+msgstr ""
+
+#: templates/projects/cartera-futuros.html:23
+msgid ""
+"It includes a customizable alert system that users configure based on "
+"their own criteria, receiving notifications when prices fluctuate or when"
+" the total portfolio value changes."
+msgstr ""
+
+#: templates/projects/cartera-futuros.html:29
+msgid "Real data obtained from the ReMarkets API using PyRofex."
+msgstr ""
+
+#: templates/projects/cartera-futuros.html:31
+msgid "Automatic alert email notifications."
+msgstr ""
+
+#: templates/projects/drabeh.html:18
+msgid "A platform where people communicate through drawings instead of words."
+msgstr ""
+
+#: templates/projects/drabeh.html:21
+msgid ""
+"Each post can contain a drawing, and it can be replied to with another "
+"drawing. In this way, visual conversation threads are created between "
+"users."
+msgstr ""
+
+#: templates/projects/drabeh.html:24
+msgid ""
+"Each piece of art is created within the site's drawing canvas, ensuring "
+"that all content is original."
+msgstr ""
+
+#: templates/projects/drabeh.html:29
+msgid "Authentication via Google OAuth."
+msgstr ""
+
+#: templates/projects/drabeh.html:30
+msgid "Membership payments through PayPal."
+msgstr ""
+
+#: templates/projects/drabeh.html:31
+msgid "Automatic confirmation email delivery."
+msgstr ""
+
+#: templates/projects/drabeh.html:32
+msgid "Moderation system with reports and bans."
+msgstr ""
+
+#: templates/projects/planificador-horarios-utn.html:17
+msgid ""
+"A website that allows students of the National Technological University "
+"of Rosario to select the classes they want to take and view the resulting"
+" schedule, notifying them of potential overlaps."
+msgstr ""
+
+#: templates/projects/planificador-horarios-utn.html:20
+msgid ""
+"The platform comes preloaded with university classes and allows users to "
+"add new ones locally."
+msgstr ""
+
+#: templates/projects/planificador-horarios-utn.html:26
+msgid ""
+"Calculation of all possible combinations of sections for the selected "
+"classes."
+msgstr ""
+
+#: templates/projects/planificador-horarios-utn.html:29
+msgid "Email submission requests for the inclusion of new classes."
+msgstr ""
+
+#: templates/projects/project-base.html:83
+msgid "Description"
+msgstr ""
+
+#: templates/projects/project-base.html:92
+msgid "Features"
+msgstr ""
+
+#: templates/projects/project-base.html:103
+msgid "Team"
+msgstr ""
+
+#: templates/projects/project-base.html:106
+msgid "Project developed by a team of"
+msgstr ""
+
+#: templates/projects/project-base.html:107
+msgid "members."
+msgstr ""
+
+#: templates/projects/project-base.html:130
+msgid "Source code"
+msgstr ""
+
+#: templates/projects/project-base.html:157
+msgid "View live"
+msgstr ""
+
+#: templates/projects/tienda-online.html:15
+msgid ""
+"Online store with inventory management, order processing, and "
+"administration of catalogs, promotions, suppliers, employees, and "
+"customers."
+msgstr ""
+
+#: templates/projects/tienda-online.html:20
+msgid "Product price history."
+msgstr ""
+
+#: templates/projects/tienda-online.html:21
+msgid "Shopping cart."
+msgstr ""
+
+#: templates/projects/tienda-online.html:22
+msgid "Admin dashboard."
+msgstr ""
+
+#: templates/projects/tienda-online.html:23
+msgid "Delivery tracking."
+msgstr ""
+
+#: templates/projects/webquizapp.html:18
+msgid "Competitive quiz website."
+msgstr ""
+
+#: templates/projects/webquizapp.html:20
+msgid ""
+"Each room has a single administrator who creates quizzes on various "
+"topics, sets an end date, and manages a scoreboard."
+msgstr ""
+
+#: templates/projects/webquizapp.html:23
+msgid ""
+"When the room’s end date is reached, the user or users with the highest "
+"score are declared winners."
+msgstr ""
+
+#: templates/projects/webquizapp.html:26
+msgid ""
+"Each user has a rank that increases as they complete challenges across "
+"different quizzes."
+msgstr ""
+
+#: templates/projects/webquizapp.html:31
+msgid "Administration panel for the site and each room."
+msgstr ""
+
+#: templates/projects/webquizapp.html:32
+msgid "Email delivery of quiz results."
+msgstr ""
+

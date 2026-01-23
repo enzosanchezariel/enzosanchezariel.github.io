@@ -15,24 +15,21 @@
 %}
 
 {% block description %}
-  <p>Competitive quiz website.</p>
+  <p>{{ gettext("Competitive quiz website.") }}</p>
   <p>
-    Each room has a single administrator who creates quizzes on various topics,
-    sets an end date, and manages a scoreboard.
+    {{ gettext("Each room has a single administrator who creates quizzes on various topics, sets an end date, and manages a scoreboard.") }}
   </p>
   <p>
-    When the room’s end date is reached, the user or users with the highest
-    score are declared winners.
+    {{ gettext("When the room’s end date is reached, the user or users with the highest score are declared winners.") }}
   </p>
   <p>
-    Each user has a rank that increases as they complete challenges across
-    different quizzes.
+    {{ gettext("Each user has a rank that increases as they complete challenges across different quizzes.") }}
   </p>
 {% endblock %}
 
 {% block features %}
-  <li>Administration panel for the site and each room.</li>
-  <li>Email delivery of quiz results.</li>
+  <li>{{ gettext("Administration panel for the site and each room.") }}</li>
+  <li>{{ gettext("Email delivery of quiz results.") }}</li>
 {% endblock %}
 
 {% set members = 4 %}

@@ -9,7 +9,11 @@
     "lsv": "npx live-server --host=0.0.0.0",
     "f:w": "flask run --debug --host=0.0.0.0",
     "f:h": "flask run --host=0.0.0.0",
-    "f:s": "flask shell"
+    "f:s": "flask shell",
+    "pb:e": "pybabel extract -F babel.cfg -o messages.pot .",
+    "pb:i": "pybabel init -i messages.pot -d translations -l es",
+    "pb:u": "pybabel update -i messages.pot -d translations",
+    "pb:c": "pybabel compile -d translations"
   },
   "devDependencies": {
     "prettier": "^3.6.2",

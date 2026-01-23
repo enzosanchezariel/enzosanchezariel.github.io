@@ -1,6 +1,6 @@
 {% extends "projects/project-base.html" %}
 
-{% set title = "Futures Portfolio" %}
+{% set title = gettext("Futures Portfolio") %}
 
 {%
   set images = [
@@ -13,21 +13,22 @@
 %}
 
 {% block description %}
-  <p>Website to manage and monitor Argentine futures investment portfolios.</p>
   <p>
-    It allows users to record and review the portfolio composition at any time,
-    with up-to-date performance metrics.
+    {{ gettext("Website to manage and monitor Argentine futures investment portfolios.") }}
   </p>
   <p>
-    It includes a customizable alert system that users configure based on their
-    own criteria, receiving notifications when prices fluctuate or when the
-    total portfolio value changes.
+    {{ gettext("It allows users to record and review the portfolio composition at any time, with up-to-date performance metrics.") }}
+  </p>
+  <p>
+    {{ gettext("It includes a customizable alert system that users configure based on their own criteria, receiving notifications when prices fluctuate or when the total portfolio value changes.") }}
   </p>
 {% endblock %}
 
 {% block features %}
-  <li>Real data obtained from the ReMarkets API using PyRofex.</li>
-  <li>Automatic alert email notifications.</li>
+  <li>
+    {{ gettext("Real data obtained from the ReMarkets API using PyRofex.") }}
+  </li>
+  <li>{{ gettext("Automatic alert email notifications.") }}</li>
 {% endblock %}
 
 {% set members = 3 %}

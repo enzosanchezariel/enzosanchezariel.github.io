@@ -3,7 +3,7 @@ from flask import Flask
 from flask.cli import load_dotenv
 from routes.pages import pages_bp
 from routes.email import email_bp
-from extensions import mail
+from extensions import *
 
 
 def create_app():
@@ -26,7 +26,9 @@ def create_app():
     app.config["MAIL_PASSWORD"] = mail_password
     app.config["MAIL_USE_TLS"] = mail_use_tls
     app.config["MAIL_USE_SSL"] = mail_use_ssl
+    app.config["BABEL_TRANSLATION_DIRECTORIES"] = "translations"
 
     mail.init_app(app)
+    babel.init_app(app, locale_selector=get_locale)
 
     return app
