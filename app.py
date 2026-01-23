@@ -3,6 +3,7 @@ from flask import Flask
 from flask.cli import load_dotenv
 from routes.pages import pages_bp
 from routes.email import email_bp
+from routes.lang import lang_bp
 from extensions import *
 
 
@@ -12,6 +13,7 @@ def create_app():
     app = Flask(__name__)
     app.register_blueprint(pages_bp)
     app.register_blueprint(email_bp)
+    app.register_blueprint(lang_bp)
 
     mail_username = os.environ.get("MAIL_USERNAME")
     mail_password = os.environ.get("MAIL_PASSWORD")
@@ -19,6 +21,8 @@ def create_app():
     mail_port = os.environ.get("MAIL_PORT")
     mail_use_tls = os.environ.get("MAIL_USE_TLS", "true").lower() == "true"
     mail_use_ssl = os.environ.get("MAIL_USE_SSL", "false").lower() == "true"
+
+    app.secret_key = os.environ.get("SECRET_KEY")
 
     app.config["MAIL_SERVER"] = mail_server
     app.config["MAIL_PORT"] = mail_port
@@ -30,5 +34,9 @@ def create_app():
 
     mail.init_app(app)
     babel.init_app(app, locale_selector=get_locale)
+
+    @app.context_processor
+    def inject_locale():
+        return {"get_locale": get_locale}
 
     return app

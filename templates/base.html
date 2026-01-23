@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ current_locale }}">
+<html lang="{{ get_locale() }}">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -112,5 +112,23 @@
       });
     </script>
     {% block content %}{% endblock %}
+    <footer
+      class="flex justify-center border-t-1 border-slate-200 dark:border-zinc-700"
+    >
+      <div class="flex w-full flex-row items-center p-4 lg:p-6 xl:max-w-6xl">
+        <p class="flex-1 text-gray-800 dark:text-zinc-200">Enzo Sánchez.</p>
+        <select
+          onchange="location = '/setlang?lang=' + this.value;"
+          class="rounded-sm bg-white px-3 py-2 text-gray-800 outline-1 outline-slate-200 transition placeholder:text-emerald-500 focus:outline-emerald-300 dark:bg-zinc-800 dark:text-zinc-200 dark:outline-zinc-700"
+        >
+          <option value="en" {{ 'selected' if get_locale() == 'en' else '' }}>
+            English
+          </option>
+          <option value="es" {{ 'selected' if get_locale() == 'es' else '' }}>
+            Español
+          </option>
+        </select>
+      </div>
+    </footer>
   </body>
 </html>
