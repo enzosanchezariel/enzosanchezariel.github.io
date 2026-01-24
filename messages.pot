@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-22 20:38-0300\n"
+"POT-Creation-Date: 2026-01-23 23:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -247,8 +247,8 @@ msgstr ""
 
 #: templates/projects/webquizapp.html:20
 msgid ""
-"Each room has a single administrator who creates quizzes on various "
-"topics, sets an end date, and manages a scoreboard."
+"Each room has an end date, a scoreboard and a single administrator who "
+"creates quizzes on various topics."
 msgstr ""
 
 #: templates/projects/webquizapp.html:23
@@ -263,11 +263,13 @@ msgid ""
 "different quizzes."
 msgstr ""
 
-#: templates/projects/webquizapp.html:31
-msgid "Administration panel for the site and each room."
+#: templates/projects/webquizapp.html:32
+msgid ""
+"Administration panel for the site administrator and each room "
+"administrator."
 msgstr ""
 
-#: templates/projects/webquizapp.html:32
+#: templates/projects/webquizapp.html:34
 msgid "Email delivery of quiz results."
 msgstr ""
 

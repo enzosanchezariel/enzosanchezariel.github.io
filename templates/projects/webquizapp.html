@@ -17,7 +17,7 @@
 {% block description %}
   <p>{{ gettext("Competitive quiz website.") }}</p>
   <p>
-    {{ gettext("Each room has a single administrator who creates quizzes on various topics, sets an end date, and manages a scoreboard.") }}
+    {{ gettext("Each room has an end date, a scoreboard and a single administrator who creates quizzes on various topics.") }}
   </p>
   <p>
     {{ gettext("When the room’s end date is reached, the user or users with the highest score are declared winners.") }}
@@ -28,7 +28,9 @@
 {% endblock %}
 
 {% block features %}
-  <li>{{ gettext("Administration panel for the site and each room.") }}</li>
+  <li>
+    {{ gettext("Administration panel for the site administrator and each room administrator.") }}
+  </li>
   <li>{{ gettext("Email delivery of quiz results.") }}</li>
 {% endblock %}
 

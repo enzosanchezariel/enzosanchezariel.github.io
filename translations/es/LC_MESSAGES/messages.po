@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-22 20:38-0300\n"
+"POT-Creation-Date: 2026-01-23 23:43-0300\n"
 "PO-Revision-Date: 2026-01-22 20:40-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -112,20 +112,27 @@ msgstr "Enviar mensaje"
 
 #: templates/projects/cartera-futuros.html:17
 msgid "Website to manage and monitor Argentine futures investment portfolios."
-msgstr "Sitio web para gestionar y monitorear portafolios de inversiones en futuros argentinos."
+msgstr ""
+"Sitio web para gestionar y monitorear portafolios de inversiones en "
+"futuros argentinos."
 
 #: templates/projects/cartera-futuros.html:20
 msgid ""
 "It allows users to record and review the portfolio composition at any "
 "time, with up-to-date performance metrics."
-msgstr "Permite registrar y consultar la composición del portafolio en cualquier momento, con métricas de rendimiento actualizadas."
+msgstr ""
+"Permite registrar y consultar la composición del portafolio en cualquier "
+"momento, con métricas de rendimiento actualizadas."
 
 #: templates/projects/cartera-futuros.html:23
 msgid ""
 "It includes a customizable alert system that users configure based on "
 "their own criteria, receiving notifications when prices fluctuate or when"
 " the total portfolio value changes."
-msgstr "Incluye un sistema de alertas personalizables que el usuario configura según sus propios criterios, recibiendo notificaciones ante variaciones en los precios o en el valor total del portafolio."
+msgstr ""
+"Incluye un sistema de alertas personalizables que el usuario configura "
+"según sus propios criterios, recibiendo notificaciones ante variaciones "
+"en los precios o en el valor total del portafolio."
 
 #: templates/projects/cartera-futuros.html:29
 msgid "Real data obtained from the ReMarkets API using PyRofex."
@@ -137,20 +144,27 @@ msgstr "Envío de emails de alertas automáticos."
 
 #: templates/projects/drabeh.html:18
 msgid "A platform where people communicate through drawings instead of words."
-msgstr "Una plataforma donde las personas se comunican a través de dibujos en lugar de palabras."
+msgstr ""
+"Una plataforma donde las personas se comunican a través de dibujos en "
+"lugar de palabras."
 
 #: templates/projects/drabeh.html:21
 msgid ""
 "Each post can contain a drawing, and it can be replied to with another "
 "drawing. In this way, visual conversation threads are created between "
 "users."
-msgstr "Each post can contain a drawing, and it can be replied to with another drawing. In this way, visual conversation threads are created between users."
+msgstr ""
+"Cada post puede contener un dibujo, y el mismo puede ser respondido con "
+"otro dibujo. De esta manera, se crean hilos visuales de conversación "
+"entre usuarios."
 
 #: templates/projects/drabeh.html:24
 msgid ""
 "Each piece of art is created within the site's drawing canvas, ensuring "
 "that all content is original."
-msgstr "Cada pieza de arte es creada dentro del lienzo de dibujo del sitio, asegurando que todo el contenido sea auténtico."
+msgstr ""
+"Cada pieza de arte es creada dentro del lienzo de dibujo del sitio, "
+"asegurando que todo el contenido sea auténtico."
 
 #: templates/projects/drabeh.html:29
 msgid "Authentication via Google OAuth."
@@ -173,19 +187,26 @@ msgid ""
 "A website that allows students of the National Technological University "
 "of Rosario to select the classes they want to take and view the resulting"
 " schedule, notifying them of potential overlaps."
-msgstr "Sitio web que permite a los estudiantes de la Universidad Tecnológica Nacional de Rosario seleccionar las materias que desean cursar y visualizar el calendario resultante, notificando posibles solapamientos."
+msgstr ""
+"Sitio web que permite a los estudiantes de la Universidad Tecnológica "
+"Nacional de Rosario seleccionar las materias que desean cursar y "
+"visualizar el calendario resultante, notificando posibles solapamientos."
 
 #: templates/projects/planificador-horarios-utn.html:20
 msgid ""
 "The platform comes preloaded with university classes and allows users to "
 "add new ones locally."
-msgstr "La plataforma está precargada con materias de la facultad y permite a los usuarios agregar nuevas asignaturas localmente."
+msgstr ""
+"La plataforma está precargada con materias de la facultad y permite a los"
+" usuarios agregar nuevas asignaturas localmente."
 
 #: templates/projects/planificador-horarios-utn.html:26
 msgid ""
 "Calculation of all possible combinations of sections for the selected "
 "classes."
-msgstr "Cálculo de todas las posibles combinaciones de comisiones de las materias seleccionadas."
+msgstr ""
+"Cálculo de todas las posibles combinaciones de comisiones de las materias"
+" seleccionadas."
 
 #: templates/projects/planificador-horarios-utn.html:29
 msgid "Email submission requests for the inclusion of new classes."
@@ -224,7 +245,9 @@ msgid ""
 "Online store with inventory management, order processing, and "
 "administration of catalogs, promotions, suppliers, employees, and "
 "customers."
-msgstr "Tienda online con gestión de inventarios, pedidos, administración de catálogos, promociones, proveedores, empleados y clientes."
+msgstr ""
+"Tienda online con gestión de inventarios, pedidos, administración de "
+"catálogos, promociones, proveedores, empleados y clientes."
 
 #: templates/projects/tienda-online.html:20
 msgid "Product price history."
@@ -248,27 +271,35 @@ msgstr "Sitio web de cuestionarios competitivos."
 
 #: templates/projects/webquizapp.html:20
 msgid ""
-"Each room has a single administrator who creates quizzes on various "
-"topics, sets an end date, and manages a scoreboard."
-msgstr "Cada sala tiene un único administrador que crea cuestionarios de diversos temas, una fecha de finalización y una tabla de puntajes."
+"Each room has an end date, a scoreboard and a single administrator who "
+"creates quizzes on various topics."
+msgstr ""
+"Cada sala tiene una fecha de finalización, una tabla de puntajes y un único administrador que crea cuestionarios de diversos"
+" temas."
 
 #: templates/projects/webquizapp.html:23
 msgid ""
 "When the room’s end date is reached, the user or users with the highest "
 "score are declared winners."
-msgstr "Al llegar la fecha de finalización de la sala, el o los usuarios con mayor puntaje son declarados ganadores."
+msgstr ""
+"Al llegar la fecha de finalización de la sala, el o los usuarios con "
+"mayor puntaje son declarados ganadores."
 
 #: templates/projects/webquizapp.html:26
 msgid ""
 "Each user has a rank that increases as they complete challenges across "
 "different quizzes."
-msgstr "Cada usuario tiene un rango que aumenta conforme completa desafíos en distintos cuestionarios."
-
-#: templates/projects/webquizapp.html:31
-msgid "Administration panel for the site and each room."
-msgstr "Panel de administración del sitio y de cada sala."
+msgstr ""
+"Cada usuario tiene un rango que aumenta conforme completa desafíos en "
+"distintos cuestionarios."
 
 #: templates/projects/webquizapp.html:32
+msgid ""
+"Administration panel for the site administrator and each room "
+"administrator."
+msgstr "Panel de administración para el administrador del sitio y los administradores de cada sala."
+
+#: templates/projects/webquizapp.html:34
 msgid "Email delivery of quiz results."
 msgstr "Envío de resultados de cuestionarios por email."
 
