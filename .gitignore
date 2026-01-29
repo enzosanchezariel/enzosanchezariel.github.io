@@ -22,5 +22,6 @@ npm-debug.log
 .DS_Store
 
 static/css/output.css
+portfolio.sock
 
 *.mo
