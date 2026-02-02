@@ -75,6 +75,44 @@
             {{ title }}
           </h1>
         </div>
+        {% if video %}
+          <div class="mb-4 w-fit">
+            <a
+              href="https://www.youtube.com/watch?v={{ video }}"
+              target="_blank"
+            >
+              <div
+                class="flex flex-row items-center gap-2 overflow-hidden rounded-sm text-gray-800 outline-1 outline-gray-200 transition hover:bg-emerald-200 hover:outline-0 active:scale-90 active:bg-emerald-200 active:outline-0 dark:bg-zinc-800 dark:text-white dark:outline-zinc-700 dark:hover:bg-emerald-600 dark:active:bg-emerald-600"
+              >
+                <img
+                  class="h-[3lh]"
+                  src="https://img.youtube.com/vi/{{ video }}/mqdefault.jpg"
+                  alt="{{ gettext('Video thumbnail') }}"
+                />
+                <p>{{ gettext('Watch video demo') }}</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="mr-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
+                  />
+                  <path d="M11 13l9 -9" />
+                  <path d="M15 4h5v5" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        {% endif %}
         <div class="grid gap-4 lg:grid-cols-2">
           <article
             class="rounded-sm border-gray-200 text-gray-800 lg:border-1 lg:p-6 dark:border-zinc-700 dark:text-white dark:lg:bg-zinc-800 [&>p]:mb-2"
