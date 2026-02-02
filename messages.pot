@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-23 23:43-0300\n"
+"POT-Creation-Date: 2026-02-02 14:14-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,7 +41,7 @@ msgstr ""
 msgid "Download CV"
 msgstr ""
 
-#: templates/index.html:114 templates/projects/project-base.html:113
+#: templates/index.html:114 templates/projects/project-base.html:151
 msgid "Technologies"
 msgstr ""
 
@@ -134,36 +134,36 @@ msgstr ""
 msgid "Automatic alert email notifications."
 msgstr ""
 
-#: templates/projects/drabeh.html:18
+#: templates/projects/drabeh.html:20
 msgid "A platform where people communicate through drawings instead of words."
 msgstr ""
 
-#: templates/projects/drabeh.html:21
+#: templates/projects/drabeh.html:23
 msgid ""
 "Each post can contain a drawing, and it can be replied to with another "
 "drawing. In this way, visual conversation threads are created between "
 "users."
 msgstr ""
 
-#: templates/projects/drabeh.html:24
+#: templates/projects/drabeh.html:26
 msgid ""
 "Each piece of art is created within the site's drawing canvas, ensuring "
 "that all content is original."
 msgstr ""
 
-#: templates/projects/drabeh.html:29
+#: templates/projects/drabeh.html:31
 msgid "Authentication via Google OAuth."
 msgstr ""
 
-#: templates/projects/drabeh.html:30
+#: templates/projects/drabeh.html:32
 msgid "Membership payments through PayPal."
 msgstr ""
 
-#: templates/projects/drabeh.html:31
+#: templates/projects/drabeh.html:33
 msgid "Automatic confirmation email delivery."
 msgstr ""
 
-#: templates/projects/drabeh.html:32
+#: templates/projects/drabeh.html:34
 msgid "Moderation system with reports and bans."
 msgstr ""
 
@@ -190,31 +190,39 @@ msgstr ""
 msgid "Email submission requests for the inclusion of new classes."
 msgstr ""
 
-#: templates/projects/project-base.html:83
-msgid "Description"
+#: templates/projects/project-base.html:90
+msgid "Video thumbnail"
 msgstr ""
 
 #: templates/projects/project-base.html:92
-msgid "Features"
+msgid "Watch demo video"
 msgstr ""
 
-#: templates/projects/project-base.html:103
-msgid "Team"
-msgstr ""
-
-#: templates/projects/project-base.html:106
-msgid "Project developed by a team of"
-msgstr ""
-
-#: templates/projects/project-base.html:107
-msgid "members."
+#: templates/projects/project-base.html:121
+msgid "Description"
 msgstr ""
 
 #: templates/projects/project-base.html:130
+msgid "Features"
+msgstr ""
+
+#: templates/projects/project-base.html:141
+msgid "Team"
+msgstr ""
+
+#: templates/projects/project-base.html:144
+msgid "Project developed by a team of"
+msgstr ""
+
+#: templates/projects/project-base.html:145
+msgid "members."
+msgstr ""
+
+#: templates/projects/project-base.html:168
 msgid "Source code"
 msgstr ""
 
-#: templates/projects/project-base.html:157
+#: templates/projects/project-base.html:195
 msgid "View live"
 msgstr ""
 
